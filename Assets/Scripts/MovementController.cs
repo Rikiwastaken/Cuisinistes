@@ -16,8 +16,6 @@ public class MovementController : MonoBehaviour
 
     public float speed;
 
-    private Vector3 targetcamrotation;
-
     public Transform handtransform;
 
     [Header("Arm Sway")]

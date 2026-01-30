@@ -9,7 +9,7 @@ public class UnderLineCloseObjects : MonoBehaviour
 
     public string pickableTag;
 
-    private GameObject[] objectspickable;
+    public GameObject[] objectspickable;
 
     public Material outlinematerial;
 
