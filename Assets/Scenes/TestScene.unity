@@ -723,6 +723,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1626375850677786430, guid: 7814ff4f315a3904090b3bd6583a70e8, type: 3}
+      propertyPath: minimumweight
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1626375850677786430, guid: 7814ff4f315a3904090b3bd6583a70e8, type: 3}
+      propertyPath: distanceformax
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1626375850677786430, guid: 7814ff4f315a3904090b3bd6583a70e8, type: 3}
+      propertyPath: distancewhenstarts
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2492912730358688711, guid: 7814ff4f315a3904090b3bd6583a70e8, type: 3}
+      propertyPath: maxVerticalAngle
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 2492912730358688711, guid: 7814ff4f315a3904090b3bd6583a70e8, type: 3}
+      propertyPath: minVerticalAngle
+      value: -40
+      objectReference: {fileID: 0}
     - target: {fileID: 5666336440584362473, guid: 7814ff4f315a3904090b3bd6583a70e8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

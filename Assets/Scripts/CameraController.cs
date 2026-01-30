@@ -8,12 +8,16 @@ public class CameraController : MonoBehaviour
     private float rotationX = 0f;
     private float rotationY = 0f;
 
+
     public float sensitivityX = 15f;
     public float sensitivityY = 15f;
 
     InputAction LookAction;
 
     public Transform CameraTransform;
+
+    public float minVerticalAngle = -80f;
+    public float maxVerticalAngle = 80f;
 
 
     void Start()
@@ -32,7 +36,7 @@ public class CameraController : MonoBehaviour
 
 
         rotationX -= mouseY;
-        rotationX = Mathf.Clamp(rotationX, -90f, 90f);
+        rotationX = Mathf.Clamp(rotationX, minVerticalAngle, maxVerticalAngle);
 
         CameraTransform.localRotation = Quaternion.Euler(rotationX, 0f, 0f);
 
