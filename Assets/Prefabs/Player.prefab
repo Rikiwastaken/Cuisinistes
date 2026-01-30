@@ -297,6 +297,7 @@ GameObject:
   - component: {fileID: 2492912730358688711}
   - component: {fileID: 1166397621363515158}
   - component: {fileID: 1626375850677786430}
+  - component: {fileID: 9190491551218582027}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -439,6 +440,26 @@ MonoBehaviour:
   minimumweight: 0.4
   distancewhenstarts: 5
   distanceformax: 3.5
+--- !u!114 &9190491551218582027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6491104973380140220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 112833c67cb4bea43ad742f00be2e68f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  minimaldistance: 5
+  pickableTag: CanBeTaken
+  outlinematerial: {fileID: 2100000, guid: bb92be9bb14549a46baf375f60aed815, type: 2}
+  layermask:
+    serializedVersion: 2
+    m_Bits: 128
+  cam: {fileID: 7473135373630052200}
+  maxdistanceforraycast: 10
 --- !u!1 &6965929437208380735
 GameObject:
   m_ObjectHideFlags: 0
@@ -614,9 +635,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8469990867830010200, guid: 00ba0f56429f2cb6490ea9f586c7a300, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 00ba0f56429f2cb6490ea9f586c7a300, type: 3}
       propertyPath: m_Name
       value: Flashlight
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 00ba0f56429f2cb6490ea9f586c7a300, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2766212503428324877, guid: 00ba0f56429f2cb6490ea9f586c7a300, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -682,6 +715,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a0ba6a6f2b1c0c8dc8ed88c03098be4d, type: 3}
       propertyPath: m_Name
       value: Hand
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a0ba6a6f2b1c0c8dc8ed88c03098be4d, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
