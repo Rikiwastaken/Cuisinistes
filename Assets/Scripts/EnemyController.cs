@@ -3,15 +3,16 @@ using UnityEngine.AI;
 
 public class EnemyController : MonoBehaviour
 {
+    public static EnemyController instance;
 
     public bool chasing;
 
     public NavMeshAgent agent;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
-
+        instance = this;
     }
 
     // Update is called once per frame
