@@ -4,6 +4,8 @@ using UnityEngine.InputSystem;
 public class MovementController : MonoBehaviour
 {
 
+    public static MovementController instance;
+
     public Transform CameraTransform;
     private Rigidbody rb;
 
@@ -11,11 +13,29 @@ public class MovementController : MonoBehaviour
 
     public float speed;
 
+    private Vector3 targetcamrotation;
+
+    public Transform handtransform;
+
+    public float swaymax;
+
+    private bool goingUp;
+
+    public float changeperframe;
+
+    private float baseYHand;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         MoveAction = InputSystem.actions.FindAction("Move");
+        baseYHand = handtransform.localPosition.y;
     }
 
     // Update is called once per frame
@@ -37,6 +57,28 @@ public class MovementController : MonoBehaviour
 
 
             rb.linearVelocity = movement;
+
+
+
+
+            //armsway
+
+            if (goingUp)
+            {
+                handtransform.localPosition += new Vector3(0f, changeperframe * Time.deltaTime, 0f);
+                if (handtransform.localPosition.y > baseYHand + swaymax)
+                {
+                    goingUp = !goingUp;
+                }
+            }
+            else
+            {
+                handtransform.localPosition -= new Vector3(0f, changeperframe * Time.deltaTime, 0f);
+                if (handtransform.localPosition.y < baseYHand - swaymax)
+                {
+                    goingUp = !goingUp;
+                }
+            }
         }
         else
         {
