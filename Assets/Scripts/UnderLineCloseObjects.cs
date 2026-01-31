@@ -32,6 +32,10 @@ public class UnderLineCloseObjects : MonoBehaviour
     {
         foreach (GameObject obj in objectspickable)
         {
+            if (obj == null)
+            {
+                continue;
+            }
             RaycastHit hit;
             Ray ray = new Ray(cam.position, cam.forward);
 
@@ -55,6 +59,20 @@ public class UnderLineCloseObjects : MonoBehaviour
         }
     }
 
+    public void RemoveObjectFromList(GameObject obj)
+    {
+        GameObject[] pickables = new GameObject[objectspickable.Length - 1];
+        int i = 0;
+        foreach (GameObject oldobject in objectspickable)
+        {
+            if (oldobject != obj)
+            {
+                pickables[i] = oldobject;
+                i++;
+            }
+        }
+        objectspickable = pickables;
+    }
 
     private void AddMaterial(GameObject obj)
     {

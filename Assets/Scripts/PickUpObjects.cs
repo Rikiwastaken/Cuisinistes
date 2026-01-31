@@ -1,3 +1,6 @@
+
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -22,13 +25,28 @@ public class PickUpObjects : MonoBehaviour
 
     public AudioClip throwObjectSFX;
 
+    [Header("Clues")]
+    public List<int> heldClues;
+
+    public float timeforpickingupclues;
+    private int currentpickingup;
+    public UnityEngine.UI.Image ClueImage;
+    public TextMeshProUGUI HeldItemsText;
+
+    private int delayforpickingup;
+
+    private InputAction clickInput;
+
     private void Start()
     {
         SoundManager = SoundManager.instance;
         interractInput = InputSystem.actions.FindAction("Interact");
+        clickInput = InputSystem.actions.FindAction("PickUpItem");
+        HeldItemsText.text = "Clues picked up : 0/5";
+        delayforpickingup = (int)(timeforpickingupclues / Time.deltaTime);
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if (CurrentObjectPickedUp != null)
@@ -41,16 +59,62 @@ public class PickUpObjects : MonoBehaviour
             }
         }
 
-        if (interractInput.ReadValue<float>() != 0f)
+        if (clickInput.ReadValue<float>() == 1f)
         {
-            Interact();
+            GameObject closestobj = FindCloset();
+            if (closestobj != null && closestobj.GetComponent<ThrowObjectScript>().isclue)
+            {
+                currentpickingup++;
+
+                if (currentpickingup >= delayforpickingup)
+                {
+                    heldClues.Add(closestobj.GetComponent<ThrowObjectScript>().clueID);
+                    HeldItemsText.text = "Clues picked up : " + heldClues.Count + "/5";
+                    GetComponent<UnderLineCloseObjects>().RemoveObjectFromList(closestobj);
+                    Destroy(closestobj);
+                }
+            }
+            else
+            {
+                delayforpickingup = (int)(timeforpickingupclues / Time.deltaTime);
+                currentpickingup = 0;
+            }
         }
+        else
+        {
+            delayforpickingup = (int)(timeforpickingupclues / Time.deltaTime);
+            currentpickingup = 0;
+            if (interractInput.ReadValue<float>() != 0f)
+            {
+                Interact();
+            }
+        }
+
+        ClueImage.fillAmount = (float)currentpickingup / (float)delayforpickingup;
 
         if (InteractCDCounter > 0)
         {
             InteractCDCounter--;
         }
 
+
+    }
+
+
+    public GameObject FindCloset()
+    {
+        float mindist = GetComponent<UnderLineCloseObjects>().minimaldistance;
+        GameObject closestobj = null;
+        foreach (GameObject obj in GetComponent<UnderLineCloseObjects>().objectspickable)
+        {
+            float distance = Vector3.Distance(obj.transform.position, transform.position);
+            if (distance <= mindist)
+            {
+                closestobj = obj;
+                mindist = distance;
+            }
+        }
+        return closestobj;
     }
 
     private void Interact()
@@ -65,17 +129,7 @@ public class PickUpObjects : MonoBehaviour
         }
         if (CurrentObjectPickedUp == null)
         {
-            float mindist = GetComponent<UnderLineCloseObjects>().minimaldistance;
-            GameObject closestobj = null;
-            foreach (GameObject obj in GetComponent<UnderLineCloseObjects>().objectspickable)
-            {
-                float distance = Vector3.Distance(obj.transform.position, transform.position);
-                if (distance <= mindist)
-                {
-                    closestobj = obj;
-                    mindist = distance;
-                }
-            }
+            GameObject closestobj = FindCloset();
             if (closestobj != null)
             {
                 PickUpObject(closestobj);

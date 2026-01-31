@@ -23,6 +23,8 @@ public class ThrowObjectScript : MonoBehaviour
 
     public int SFXID;
 
+    public int clueID;
+
     public AudioClip GrabSFX;
     public AudioClip CrasHSFX;
 
@@ -38,6 +40,7 @@ public class ThrowObjectScript : MonoBehaviour
                 CrasHSFX = SFXClass.CrashSFX;
             }
         }
+        CDBeforeFirstSound = -(int)(1 / Time.deltaTime);
     }
 
     private void Update()

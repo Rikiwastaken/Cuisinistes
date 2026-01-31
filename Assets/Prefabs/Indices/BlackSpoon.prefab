@@ -98,7 +98,8 @@ MonoBehaviour:
   clueOwnerIndex: 01000000
   sizemultiplier: 0
   isclue: 1
-  SFXID: 0
+  SFXID: 2
+  clueID: 0
   GrabSFX: {fileID: 0}
   CrasHSFX: {fileID: 0}
 --- !u!1001 &8514964329774972228

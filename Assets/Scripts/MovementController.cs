@@ -52,6 +52,15 @@ public class MovementController : MonoBehaviour
     public float distancewhenstarts;
     public float distanceformax;
 
+    [Header("Crouch")]
+    public bool iscrouching;
+    public float CamElevationWhenCrouch;
+    public float CamElevationWhenUp;
+    public float timetoCrouch;
+    public float speedwhencrouching;
+    private InputAction CrouchAction;
+
+
     private void Awake()
     {
         instance = this;
@@ -63,6 +72,7 @@ public class MovementController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         MoveAction = InputSystem.actions.FindAction("Move");
+        CrouchAction = InputSystem.actions.FindAction("Crouch");
         FlashLightToggle = InputSystem.actions.FindAction("FlashLight");
         baseYHand = handtransform.localPosition.y;
     }
@@ -71,11 +81,45 @@ public class MovementController : MonoBehaviour
     void Update()
     {
 
+        if (CrouchAction.ReadValue<float>() != 0)
+        {
+            iscrouching = true;
+        }
+        else
+        {
+            iscrouching = false;
+        }
+
+        if (iscrouching)
+        {
+            if (CameraTransform.localPosition.y > CamElevationWhenCrouch)
+            {
+                CameraTransform.localPosition -= Vector3.up * Time.deltaTime / timetoCrouch;
+            }
+
+        }
+        else
+        {
+            if (CameraTransform.localPosition.y < CamElevationWhenUp)
+            {
+                CameraTransform.localPosition += Vector3.up * Time.deltaTime / timetoCrouch;
+            }
+
+        }
+
         Vector2 MoveValue = MoveAction.ReadValue<Vector2>();
 
         if (MoveValue.magnitude != 0)
         {
-            Vector3 movement = new Vector3(MoveValue.x * speed, 0.0f, MoveValue.y * speed);
+            Vector3 movement = Vector3.zero;
+            if (iscrouching)
+            {
+                movement = new Vector3(MoveValue.x * speedwhencrouching, 0.0f, MoveValue.y * speed);
+            }
+            else
+            {
+                movement = new Vector3(MoveValue.x * speed, 0.0f, MoveValue.y * speed);
+            }
 
             movement = Quaternion.Euler(0, CameraTransform.eulerAngles.y, 0) * movement;
 
