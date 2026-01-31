@@ -13,9 +13,9 @@ FBXHeaderExtension:  {
 		Month: 1
 		Day: 31
 		Hour: 14
-		Minute: 34
-		Second: 15
-		Millisecond: 465
+		Minute: 45
+		Second: 10
+		Millisecond: 487
 	}
 	Creator: "Blockbench 5.0.5"
 	SceneInfo: "SceneInfo::GlobalInfo", "UserData" {
@@ -49,7 +49,7 @@ FBXHeaderExtension:  {
 	}
 }
 FileId: "iVFoobar"
-CreationTime: "2026-01-31 13:34:15:465"
+CreationTime: "2026-01-31 13:45:10:487"
 Creator: "Made with Blockbench"
 GlobalSettings:  {
 	Version: 1000
@@ -78,7 +78,7 @@ GlobalSettings:  {
 
 Documents:  {
 	Count: 1
-	Document: 600661285 {
+	Document: 2075832007 {
 		Scene: "Scene"
 		Properties70:  {
 			P: "SourceObject", "object", "", ""
@@ -212,7 +212,7 @@ Definitions:  {
 ;------------------------------------------------------------------
 
 Objects:  {
-	Model: 73403908, "Model::Body", "Null" {
+	Model: 77494185, "Model::Body", "Null" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -226,7 +226,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 71797732, "Model::leg", "Null" {
+	Model: 73295506, "Model::leg", "Null" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -240,7 +240,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 77195049, "Model::Monster", "Null" {
+	Model: 72142845, "Model::Monster", "Null" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -254,7 +254,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 73639023, "Model::leg2", "Null" {
+	Model: 70534746, "Model::leg2", "Null" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -268,7 +268,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 77198010, "Model::arm", "Null" {
+	Model: 72431024, "Model::arm", "Null" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -282,7 +282,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 79019717, "Model::arm2", "Null" {
+	Model: 71560808, "Model::arm2", "Null" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -296,7 +296,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 76722026, "Model::head", "Null" {
+	Model: 76289274, "Model::head", "Null" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -310,7 +310,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 73460880, "Model::InsideHead", "Null" {
+	Model: 70703831, "Model::InsideHead", "Null" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -324,7 +324,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 74909415, "Model::Mask", "Null" {
+	Model: 76133482, "Model::Mask", "Null" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -338,7 +338,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Model: 71506431, "Model::Screws", "Null" {
+	Model: 77292622, "Model::Screws", "Null" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -352,10 +352,10 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	NodeAttribute: 74792582, "NodeAttribute::armature", "Null" {
+	NodeAttribute: 79764766, "NodeAttribute::armature", "Null" {
 		TypeFlags: "Null"
 	}
-	Model: 73558537, "Model::armature", "Null" {
+	Model: 72923053, "Model::armature", "Null" {
 		Version: 232
 		Properties70:  {
 			P: "InheritType", "enum", "", "",1
@@ -366,45 +366,45 @@ Objects:  {
 		}
 		Culling: "CullingOff"
 	}
-	NodeAttribute: 75915810, "NodeAttribute::Spine", "LimbNode" {
+	NodeAttribute: 78679746, "NodeAttribute::Spine", "LimbNode" {
 		Properties70:  {
 			P: "Size", "double", "Number", "",50
 		}
 		TypeFlags: "Skeleton"
 	}
-	Model: 75499044, "Model::Spine", "LimbNode" {
+	Model: 74655972, "Model::Spine", "LimbNode" {
 		Version: 232
 		Properties70:  {
 			P: "InheritType", "enum", "", "",1
 			P: "DefaultAttributeIndex", "int", "Integer", "",0
-			P: "Lcl Translation", "Lcl Translation", "", "A",0,100,12.5
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,112.5,12.5
 			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
 		}
 		Culling: "CullingOff"
 	}
-	NodeAttribute: 73998015, "NodeAttribute::Chest", "LimbNode" {
+	NodeAttribute: 74293925, "NodeAttribute::Chest", "LimbNode" {
 		Properties70:  {
 			P: "Size", "double", "Number", "",50
 		}
 		TypeFlags: "Skeleton"
 	}
-	Model: 74871414, "Model::Chest", "LimbNode" {
+	Model: 79568421, "Model::Chest", "LimbNode" {
 		Version: 232
 		Properties70:  {
 			P: "InheritType", "enum", "", "",1
 			P: "DefaultAttributeIndex", "int", "Integer", "",0
-			P: "Lcl Translation", "Lcl Translation", "", "A",0,50,0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,37.5,0
 			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
 		}
 		Culling: "CullingOff"
 	}
-	NodeAttribute: 73265729, "NodeAttribute::RightShoulder", "LimbNode" {
+	NodeAttribute: 73364896, "NodeAttribute::RightShoulder", "LimbNode" {
 		Properties70:  {
 			P: "Size", "double", "Number", "",50
 		}
 		TypeFlags: "Skeleton"
 	}
-	Model: 79742985, "Model::RightShoulder", "LimbNode" {
+	Model: 71955924, "Model::RightShoulder", "LimbNode" {
 		Version: 232
 		Properties70:  {
 			P: "InheritType", "enum", "", "",1
@@ -414,13 +414,13 @@ Objects:  {
 		}
 		Culling: "CullingOff"
 	}
-	NodeAttribute: 76194801, "NodeAttribute::RightUpperArm", "LimbNode" {
+	NodeAttribute: 79825752, "NodeAttribute::RightUpperArm", "LimbNode" {
 		Properties70:  {
 			P: "Size", "double", "Number", "",56.25
 		}
 		TypeFlags: "Skeleton"
 	}
-	Model: 70947011, "Model::RightUpperArm", "LimbNode" {
+	Model: 71780049, "Model::RightUpperArm", "LimbNode" {
 		Version: 232
 		Properties70:  {
 			P: "InheritType", "enum", "", "",1
@@ -430,13 +430,13 @@ Objects:  {
 		}
 		Culling: "CullingOff"
 	}
-	NodeAttribute: 71879141, "NodeAttribute::RightLowerArm", "LimbNode" {
+	NodeAttribute: 77901673, "NodeAttribute::RightLowerArm", "LimbNode" {
 		Properties70:  {
 			P: "Size", "double", "Number", "",56.25
 		}
 		TypeFlags: "Skeleton"
 	}
-	Model: 78438691, "Model::RightLowerArm", "LimbNode" {
+	Model: 74003978, "Model::RightLowerArm", "LimbNode" {
 		Version: 232
 		Properties70:  {
 			P: "InheritType", "enum", "", "",1
@@ -446,13 +446,13 @@ Objects:  {
 		}
 		Culling: "CullingOff"
 	}
-	NodeAttribute: 76426929, "NodeAttribute::RightLowerArm_end", "LimbNode" {
+	NodeAttribute: 74936615, "NodeAttribute::RightLowerArm_end", "LimbNode" {
 		Properties70:  {
 			P: "Size", "double", "Number", "",90
 		}
 		TypeFlags: "Skeleton"
 	}
-	Model: 75672949, "Model::RightLowerArm_end", "LimbNode" {
+	Model: 70836507, "Model::RightLowerArm_end", "LimbNode" {
 		Version: 232
 		Properties70:  {
 			P: "InheritType", "enum", "", "",1
@@ -461,13 +461,13 @@ Objects:  {
 		}
 		Culling: "CullingOff"
 	}
-	NodeAttribute: 74840615, "NodeAttribute::LeftShoulder", "LimbNode" {
+	NodeAttribute: 78496079, "NodeAttribute::LeftShoulder", "LimbNode" {
 		Properties70:  {
 			P: "Size", "double", "Number", "",50
 		}
 		TypeFlags: "Skeleton"
 	}
-	Model: 78603026, "Model::LeftShoulder", "LimbNode" {
+	Model: 70782488, "Model::LeftShoulder", "LimbNode" {
 		Version: 232
 		Properties70:  {
 			P: "InheritType", "enum", "", "",1
@@ -477,13 +477,13 @@ Objects:  {
 		}
 		Culling: "CullingOff"
 	}
-	NodeAttribute: 74024807, "NodeAttribute::LeftUpperArm", "LimbNode" {
+	NodeAttribute: 76686990, "NodeAttribute::LeftUpperArm", "LimbNode" {
 		Properties70:  {
 			P: "Size", "double", "Number", "",56.25
 		}
 		TypeFlags: "Skeleton"
 	}
-	Model: 75996595, "Model::LeftUpperArm", "LimbNode" {
+	Model: 79532512, "Model::LeftUpperArm", "LimbNode" {
 		Version: 232
 		Properties70:  {
 			P: "InheritType", "enum", "", "",1
@@ -493,13 +493,13 @@ Objects:  {
 		}
 		Culling: "CullingOff"
 	}
-	NodeAttribute: 74421882, "NodeAttribute::LeftUpperArm_end", "LimbNode" {
+	NodeAttribute: 70954456, "NodeAttribute::LeftUpperArm_end", "LimbNode" {
 		Properties70:  {
 			P: "Size", "double", "Number", "",90
 		}
 		TypeFlags: "Skeleton"
 	}
-	Model: 79544724, "Model::LeftUpperArm_end", "LimbNode" {
+	Model: 70796719, "Model::LeftUpperArm_end", "LimbNode" {
 		Version: 232
 		Properties70:  {
 			P: "InheritType", "enum", "", "",1
@@ -508,13 +508,13 @@ Objects:  {
 		}
 		Culling: "CullingOff"
 	}
-	NodeAttribute: 72662021, "NodeAttribute::Head", "LimbNode" {
+	NodeAttribute: 71705488, "NodeAttribute::Head", "LimbNode" {
 		Properties70:  {
 			P: "Size", "double", "Number", "",75
 		}
 		TypeFlags: "Skeleton"
 	}
-	Model: 76186382, "Model::Head", "LimbNode" {
+	Model: 73608215, "Model::Head", "LimbNode" {
 		Version: 232
 		Properties70:  {
 			P: "InheritType", "enum", "", "",1
@@ -524,13 +524,13 @@ Objects:  {
 		}
 		Culling: "CullingOff"
 	}
-	NodeAttribute: 79326374, "NodeAttribute::Head_end", "LimbNode" {
+	NodeAttribute: 73446330, "NodeAttribute::Head_end", "LimbNode" {
 		Properties70:  {
 			P: "Size", "double", "Number", "",120
 		}
 		TypeFlags: "Skeleton"
 	}
-	Model: 77036931, "Model::Head_end", "LimbNode" {
+	Model: 75028132, "Model::Head_end", "LimbNode" {
 		Version: 232
 		Properties70:  {
 			P: "InheritType", "enum", "", "",1
@@ -539,45 +539,45 @@ Objects:  {
 		}
 		Culling: "CullingOff"
 	}
-	NodeAttribute: 71451464, "NodeAttribute::Hips", "LimbNode" {
+	NodeAttribute: 71255681, "NodeAttribute::Hips", "LimbNode" {
 		Properties70:  {
 			P: "Size", "double", "Number", "",50
 		}
 		TypeFlags: "Skeleton"
 	}
-	Model: 73453777, "Model::Hips", "LimbNode" {
+	Model: 77954755, "Model::Hips", "LimbNode" {
 		Version: 232
 		Properties70:  {
 			P: "InheritType", "enum", "", "",1
 			P: "DefaultAttributeIndex", "int", "Integer", "",0
-			P: "Lcl Translation", "Lcl Translation", "", "A",0,-18.75,0
+			P: "Lcl Translation", "Lcl Translation", "", "A",0,112.5,12.5
 			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
 		}
 		Culling: "CullingOff"
 	}
-	NodeAttribute: 74110914, "NodeAttribute::LeftUpperLeg", "LimbNode" {
+	NodeAttribute: 71025529, "NodeAttribute::LeftUpperLeg", "LimbNode" {
 		Properties70:  {
 			P: "Size", "double", "Number", "",50
 		}
 		TypeFlags: "Skeleton"
 	}
-	Model: 73842131, "Model::LeftUpperLeg", "LimbNode" {
+	Model: 78040733, "Model::LeftUpperLeg", "LimbNode" {
 		Version: 232
 		Properties70:  {
 			P: "InheritType", "enum", "", "",1
 			P: "DefaultAttributeIndex", "int", "Integer", "",0
-			P: "Lcl Translation", "Lcl Translation", "", "A",-25,18.75,0
+			P: "Lcl Translation", "Lcl Translation", "", "A",-25,-12.5,0
 			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,-180
 		}
 		Culling: "CullingOff"
 	}
-	NodeAttribute: 76583806, "NodeAttribute::LeftLowerLeg", "LimbNode" {
+	NodeAttribute: 73441280, "NodeAttribute::LeftLowerLeg", "LimbNode" {
 		Properties70:  {
 			P: "Size", "double", "Number", "",62.5
 		}
 		TypeFlags: "Skeleton"
 	}
-	Model: 79099042, "Model::LeftLowerLeg", "LimbNode" {
+	Model: 74813718, "Model::LeftLowerLeg", "LimbNode" {
 		Version: 232
 		Properties70:  {
 			P: "InheritType", "enum", "", "",1
@@ -587,13 +587,13 @@ Objects:  {
 		}
 		Culling: "CullingOff"
 	}
-	NodeAttribute: 77478425, "NodeAttribute::LeftFoot", "LimbNode" {
+	NodeAttribute: 73818530, "NodeAttribute::LeftFoot", "LimbNode" {
 		Properties70:  {
 			P: "Size", "double", "Number", "",50
 		}
 		TypeFlags: "Skeleton"
 	}
-	Model: 74379699, "Model::LeftFoot", "LimbNode" {
+	Model: 71996230, "Model::LeftFoot", "LimbNode" {
 		Version: 232
 		Properties70:  {
 			P: "InheritType", "enum", "", "",1
@@ -603,13 +603,13 @@ Objects:  {
 		}
 		Culling: "CullingOff"
 	}
-	NodeAttribute: 71522171, "NodeAttribute::LeftFoot_end", "LimbNode" {
+	NodeAttribute: 73206394, "NodeAttribute::LeftFoot_end", "LimbNode" {
 		Properties70:  {
 			P: "Size", "double", "Number", "",80
 		}
 		TypeFlags: "Skeleton"
 	}
-	Model: 72850739, "Model::LeftFoot_end", "LimbNode" {
+	Model: 70524265, "Model::LeftFoot_end", "LimbNode" {
 		Version: 232
 		Properties70:  {
 			P: "InheritType", "enum", "", "",1
@@ -618,29 +618,29 @@ Objects:  {
 		}
 		Culling: "CullingOff"
 	}
-	NodeAttribute: 71306546, "NodeAttribute::RightUpperLeg", "LimbNode" {
+	NodeAttribute: 71801179, "NodeAttribute::RightUpperLeg", "LimbNode" {
 		Properties70:  {
 			P: "Size", "double", "Number", "",50
 		}
 		TypeFlags: "Skeleton"
 	}
-	Model: 74091125, "Model::RightUpperLeg", "LimbNode" {
+	Model: 72306578, "Model::RightUpperLeg", "LimbNode" {
 		Version: 232
 		Properties70:  {
 			P: "InheritType", "enum", "", "",1
 			P: "DefaultAttributeIndex", "int", "Integer", "",0
-			P: "Lcl Translation", "Lcl Translation", "", "A",25,18.75,0
+			P: "Lcl Translation", "Lcl Translation", "", "A",25,-12.5,0
 			P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,-180
 		}
 		Culling: "CullingOff"
 	}
-	NodeAttribute: 74427979, "NodeAttribute::RightLowerLeg", "LimbNode" {
+	NodeAttribute: 76204137, "NodeAttribute::RightLowerLeg", "LimbNode" {
 		Properties70:  {
 			P: "Size", "double", "Number", "",62.5
 		}
 		TypeFlags: "Skeleton"
 	}
-	Model: 71265261, "Model::RightLowerLeg", "LimbNode" {
+	Model: 75233097, "Model::RightLowerLeg", "LimbNode" {
 		Version: 232
 		Properties70:  {
 			P: "InheritType", "enum", "", "",1
@@ -650,13 +650,13 @@ Objects:  {
 		}
 		Culling: "CullingOff"
 	}
-	NodeAttribute: 74755646, "NodeAttribute::RightFoot", "LimbNode" {
+	NodeAttribute: 72348649, "NodeAttribute::RightFoot", "LimbNode" {
 		Properties70:  {
 			P: "Size", "double", "Number", "",50
 		}
 		TypeFlags: "Skeleton"
 	}
-	Model: 79906373, "Model::RightFoot", "LimbNode" {
+	Model: 78815431, "Model::RightFoot", "LimbNode" {
 		Version: 232
 		Properties70:  {
 			P: "InheritType", "enum", "", "",1
@@ -666,13 +666,13 @@ Objects:  {
 		}
 		Culling: "CullingOff"
 	}
-	NodeAttribute: 79655484, "NodeAttribute::RightFoot_end", "LimbNode" {
+	NodeAttribute: 79429728, "NodeAttribute::RightFoot_end", "LimbNode" {
 		Properties70:  {
 			P: "Size", "double", "Number", "",80
 		}
 		TypeFlags: "Skeleton"
 	}
-	Model: 73847389, "Model::RightFoot_end", "LimbNode" {
+	Model: 78725820, "Model::RightFoot_end", "LimbNode" {
 		Version: 232
 		Properties70:  {
 			P: "InheritType", "enum", "", "",1
@@ -681,7 +681,7 @@ Objects:  {
 		}
 		Culling: "CullingOff"
 	}
-	Model: 70030105, "Model::torso", "Mesh" {
+	Model: 70555708, "Model::torso", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -696,7 +696,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Geometry: 77164174, "Geometry::torso", "Mesh" {
+	Geometry: 76037754, "Geometry::torso", "Mesh" {
 		Vertices: *24 {
 			a: 37.5,43.75,37.5,37.5,43.75,-6.25,37.5,0,37.5,37.5,0,-6.25,-37.5,43.75,-6.25,-37.5,43.75,37.5,-37.5,0,-6.25,-37.5,0,37.5
 		}
@@ -747,7 +747,7 @@ Objects:  {
 			}
 		}
 	}
-	Model: 78957718, "Model::stomach", "Mesh" {
+	Model: 79644596, "Model::stomach", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -762,7 +762,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Geometry: 79673882, "Geometry::stomach", "Mesh" {
+	Geometry: 76265691, "Geometry::stomach", "Mesh" {
 		Vertices: *24 {
 			a: 31.25,62.5,25,31.25,62.5,-12.5,31.25,0,25,31.25,0,-12.5,-31.25,62.5,-12.5,-31.25,62.5,25,-31.25,0,-12.5,-31.25,0,25
 		}
@@ -813,7 +813,7 @@ Objects:  {
 			}
 		}
 	}
-	Model: 73977823, "Model::thigh", "Mesh" {
+	Model: 79006404, "Model::thigh", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -828,7 +828,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Geometry: 79511434, "Geometry::thigh", "Mesh" {
+	Geometry: 73897629, "Geometry::thigh", "Mesh" {
 		Vertices: *24 {
 			a: 12.5,0,25,12.5,0,-12.5,12.5,-62.5,25,12.5,-62.5,-12.5,-25,0,-12.5,-25,0,25,-25,-62.5,-12.5,-25,-62.5,25
 		}
@@ -879,7 +879,7 @@ Objects:  {
 			}
 		}
 	}
-	Model: 73723591, "Model::bottom", "Mesh" {
+	Model: 73113803, "Model::bottom", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -894,7 +894,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Geometry: 76041270, "Geometry::bottom", "Mesh" {
+	Geometry: 73351734, "Geometry::bottom", "Mesh" {
 		Vertices: *24 {
 			a: 21.875,0,18.75,21.875,0,-12.5,21.875,-43.75,18.75,21.875,-43.75,-12.5,-9.375,0,-12.5,-9.375,0,18.75,-9.375,-43.75,-12.5,-9.375,-43.75,18.75
 		}
@@ -945,7 +945,7 @@ Objects:  {
 			}
 		}
 	}
-	Model: 71947051, "Model::foot", "Mesh" {
+	Model: 78291170, "Model::foot", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -960,7 +960,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Geometry: 79605688, "Geometry::foot", "Mesh" {
+	Geometry: 76537382, "Geometry::foot", "Mesh" {
 		Vertices: *24 {
 			a: 15.625,12.5,18.75,15.625,12.5,-25,15.625,0,18.75,15.625,0,-25,-15.625,12.5,-25,-15.625,12.5,18.75,-15.625,0,-25,-15.625,0,18.75
 		}
@@ -1011,7 +1011,7 @@ Objects:  {
 			}
 		}
 	}
-	Model: 70540647, "Model::thigh_1", "Mesh" {
+	Model: 77210673, "Model::thigh_1", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -1026,7 +1026,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Geometry: 72926842, "Geometry::thigh_1", "Mesh" {
+	Geometry: 76176616, "Geometry::thigh_1", "Mesh" {
 		Vertices: *24 {
 			a: 25,0,25,25,0,-12.5,25,-62.5,25,25,-62.5,-12.5,-12.5,0,-12.5,-12.5,0,25,-12.5,-62.5,-12.5,-12.5,-62.5,25
 		}
@@ -1077,7 +1077,7 @@ Objects:  {
 			}
 		}
 	}
-	Model: 75853157, "Model::bottom_1", "Mesh" {
+	Model: 79260272, "Model::bottom_1", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -1092,7 +1092,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Geometry: 76288164, "Geometry::bottom_1", "Mesh" {
+	Geometry: 74247508, "Geometry::bottom_1", "Mesh" {
 		Vertices: *24 {
 			a: 21.875,0,18.75,21.875,0,-12.5,21.875,-43.75,18.75,21.875,-43.75,-12.5,-9.375,0,-12.5,-9.375,0,18.75,-9.375,-43.75,-12.5,-9.375,-43.75,18.75
 		}
@@ -1143,7 +1143,7 @@ Objects:  {
 			}
 		}
 	}
-	Model: 72650361, "Model::foot_1", "Mesh" {
+	Model: 77460226, "Model::foot_1", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -1158,7 +1158,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Geometry: 71395923, "Geometry::foot_1", "Mesh" {
+	Geometry: 71930492, "Geometry::foot_1", "Mesh" {
 		Vertices: *24 {
 			a: 15.625,12.5,18.75,15.625,12.5,-25,15.625,0,18.75,15.625,0,-25,-15.625,12.5,-25,-15.625,12.5,18.75,-15.625,0,-25,-15.625,0,18.75
 		}
@@ -1209,7 +1209,7 @@ Objects:  {
 			}
 		}
 	}
-	Model: 73714688, "Model::backarm", "Mesh" {
+	Model: 75627032, "Model::backarm", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -1224,7 +1224,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Geometry: 71435953, "Geometry::backarm", "Mesh" {
+	Geometry: 70294161, "Geometry::backarm", "Mesh" {
 		Vertices: *24 {
 			a: 68.75,0,25,68.75,0,-12.5,68.75,-37.5,25,68.75,-37.5,-12.5,0,0,-12.5,0,0,25,0,-37.5,-12.5,0,-37.5,25
 		}
@@ -1275,7 +1275,7 @@ Objects:  {
 			}
 		}
 	}
-	Model: 74641427, "Model::forearm", "Mesh" {
+	Model: 71587971, "Model::forearm", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -1290,7 +1290,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Geometry: 73832736, "Geometry::forearm", "Mesh" {
+	Geometry: 70693825, "Geometry::forearm", "Mesh" {
 		Vertices: *24 {
 			a: 62.5,0,25,62.5,0,-12.5,62.5,-31.25,25,62.5,-31.25,-12.5,0,0,-12.5,0,0,25,0,-31.25,-12.5,0,-31.25,25
 		}
@@ -1341,7 +1341,7 @@ Objects:  {
 			}
 		}
 	}
-	Model: 71483624, "Model::backarm_1", "Mesh" {
+	Model: 77649685, "Model::backarm_1", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -1356,7 +1356,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Geometry: 77966518, "Geometry::backarm_1", "Mesh" {
+	Geometry: 72976634, "Geometry::backarm_1", "Mesh" {
 		Vertices: *24 {
 			a: 0,0,25,0,0,-12.5,0,-37.5,25,0,-37.5,-12.5,-68.75,0,-12.5,-68.75,0,25,-68.75,-37.5,-12.5,-68.75,-37.5,25
 		}
@@ -1407,7 +1407,7 @@ Objects:  {
 			}
 		}
 	}
-	Model: 73764419, "Model::bone", "Mesh" {
+	Model: 78765465, "Model::bone", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -1422,7 +1422,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Geometry: 75856556, "Geometry::bone", "Mesh" {
+	Geometry: 79359850, "Geometry::bone", "Mesh" {
 		Vertices: *24 {
 			a: 0,12.5,6.25,0,12.5,-6.25,0,0,6.25,0,0,-6.25,-18.75,12.5,-6.25,-18.75,12.5,6.25,-18.75,0,-6.25,-18.75,0,6.25
 		}
@@ -1473,7 +1473,7 @@ Objects:  {
 			}
 		}
 	}
-	Model: 76023962, "Model::black", "Mesh" {
+	Model: 77624375, "Model::black", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -1488,7 +1488,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Geometry: 78064045, "Geometry::black", "Mesh" {
+	Geometry: 77054810, "Geometry::black", "Mesh" {
 		Vertices: *24 {
 			a: 18.75,43.75,18.75,18.75,43.75,-6.25,18.75,-18.75,18.75,18.75,-18.75,-6.25,-18.75,43.75,-6.25,-18.75,43.75,18.75,-18.75,-18.75,-6.25,-18.75,-18.75,18.75
 		}
@@ -1539,7 +1539,7 @@ Objects:  {
 			}
 		}
 	}
-	Model: 75605147, "Model::cube", "Mesh" {
+	Model: 77726360, "Model::cube", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -1554,7 +1554,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Geometry: 77397758, "Geometry::cube", "Mesh" {
+	Geometry: 70930867, "Geometry::cube", "Mesh" {
 		Vertices: *24 {
 			a: 37.5,25,37.5,37.5,25,-25,37.5,0,37.5,37.5,0,-25,-37.5,25,-25,-37.5,25,37.5,-37.5,0,-25,-37.5,0,37.5
 		}
@@ -1605,7 +1605,7 @@ Objects:  {
 			}
 		}
 	}
-	Model: 72655565, "Model::cube_1", "Mesh" {
+	Model: 70688089, "Model::cube_1", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -1620,7 +1620,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Geometry: 74164553, "Geometry::cube_1", "Mesh" {
+	Geometry: 76447545, "Geometry::cube_1", "Mesh" {
 		Vertices: *24 {
 			a: 6.25,25,-6.25,6.25,25,-18.75,6.25,0,-6.25,6.25,0,-18.75,-6.25,25,-18.75,-6.25,25,-6.25,-6.25,0,-18.75,-6.25,0,-6.25
 		}
@@ -1671,7 +1671,7 @@ Objects:  {
 			}
 		}
 	}
-	Model: 72747379, "Model::cube_2", "Mesh" {
+	Model: 75749181, "Model::cube_2", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -1686,7 +1686,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Geometry: 70807902, "Geometry::cube_2", "Mesh" {
+	Geometry: 70746357, "Geometry::cube_2", "Mesh" {
 		Vertices: *24 {
 			a: 31.25,12.5,18.75,31.25,12.5,-25,31.25,0,18.75,31.25,0,-25,-31.25,12.5,-25,-31.25,12.5,18.75,-31.25,0,-25,-31.25,0,18.75
 		}
@@ -1737,7 +1737,7 @@ Objects:  {
 			}
 		}
 	}
-	Model: 74642145, "Model::cube_3", "Mesh" {
+	Model: 77389405, "Model::cube_3", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -1752,7 +1752,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Geometry: 71480709, "Geometry::cube_3", "Mesh" {
+	Geometry: 75821494, "Geometry::cube_3", "Mesh" {
 		Vertices: *24 {
 			a: 31.25,12.5,18.75,31.25,12.5,6.25,31.25,0,18.75,31.25,0,6.25,-31.25,12.5,6.25,-31.25,12.5,18.75,-31.25,0,6.25,-31.25,0,18.75
 		}
@@ -1803,7 +1803,7 @@ Objects:  {
 			}
 		}
 	}
-	Model: 75898929, "Model::cube_4", "Mesh" {
+	Model: 75461956, "Model::cube_4", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -1818,7 +1818,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Geometry: 77838237, "Geometry::cube_4", "Mesh" {
+	Geometry: 70779321, "Geometry::cube_4", "Mesh" {
 		Vertices: *24 {
 			a: 31.25,12.5,18.75,31.25,12.5,-25,31.25,0,18.75,31.25,0,-25,-31.25,12.5,-25,-31.25,12.5,18.75,-31.25,0,-25,-31.25,0,18.75
 		}
@@ -1869,7 +1869,7 @@ Objects:  {
 			}
 		}
 	}
-	Model: 79196707, "Model::cube_5", "Mesh" {
+	Model: 74063807, "Model::cube_5", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -1884,7 +1884,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Geometry: 72158866, "Geometry::cube_5", "Mesh" {
+	Geometry: 79051812, "Geometry::cube_5", "Mesh" {
 		Vertices: *24 {
 			a: 6.25,25,25,6.25,25,-18.75,6.25,0,25,6.25,0,-18.75,-6.25,25,-18.75,-6.25,25,25,-6.25,0,-18.75,-6.25,0,25
 		}
@@ -1935,7 +1935,7 @@ Objects:  {
 			}
 		}
 	}
-	Model: 76141444, "Model::cube_6", "Mesh" {
+	Model: 71288295, "Model::cube_6", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -1950,7 +1950,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Geometry: 73572480, "Geometry::cube_6", "Mesh" {
+	Geometry: 70522592, "Geometry::cube_6", "Mesh" {
 		Vertices: *24 {
 			a: 6.25,25,18.75,6.25,25,-18.75,6.25,0,18.75,6.25,0,-18.75,-6.25,25,-18.75,-6.25,25,18.75,-6.25,0,-18.75,-6.25,0,18.75
 		}
@@ -2001,7 +2001,7 @@ Objects:  {
 			}
 		}
 	}
-	Model: 71018626, "Model::cube_7", "Mesh" {
+	Model: 77011289, "Model::cube_7", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -2016,7 +2016,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Geometry: 78536566, "Geometry::cube_7", "Mesh" {
+	Geometry: 70762735, "Geometry::cube_7", "Mesh" {
 		Vertices: *24 {
 			a: 6.25,12.5,6.25,6.25,12.5,-6.25,6.25,0,6.25,6.25,0,-6.25,-6.25,12.5,-6.25,-6.25,12.5,6.25,-6.25,0,-6.25,-6.25,0,6.25
 		}
@@ -2067,7 +2067,7 @@ Objects:  {
 			}
 		}
 	}
-	Model: 74224570, "Model::cube_8", "Mesh" {
+	Model: 77038741, "Model::cube_8", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -2082,7 +2082,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Geometry: 78519372, "Geometry::cube_8", "Mesh" {
+	Geometry: 72749427, "Geometry::cube_8", "Mesh" {
 		Vertices: *24 {
 			a: 6.25,12.5,6.25,6.25,12.5,-6.25,6.25,0,6.25,6.25,0,-6.25,-6.25,12.5,-6.25,-6.25,12.5,6.25,-6.25,0,-6.25,-6.25,0,6.25
 		}
@@ -2133,7 +2133,7 @@ Objects:  {
 			}
 		}
 	}
-	Model: 73295217, "Model::cube_9", "Mesh" {
+	Model: 70535273, "Model::cube_9", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -2148,7 +2148,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Geometry: 79439454, "Geometry::cube_9", "Mesh" {
+	Geometry: 70264952, "Geometry::cube_9", "Mesh" {
 		Vertices: *24 {
 			a: 31.25,25,31.25,31.25,25,18.75,31.25,-31.25,31.25,31.25,-31.25,18.75,-31.25,25,18.75,-31.25,25,31.25,-31.25,-31.25,18.75,-31.25,-31.25,31.25
 		}
@@ -2199,7 +2199,7 @@ Objects:  {
 			}
 		}
 	}
-	Model: 70404849, "Model::cube_10", "Mesh" {
+	Model: 76731280, "Model::cube_10", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -2214,7 +2214,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Geometry: 72359956, "Geometry::cube_10", "Mesh" {
+	Geometry: 70375448, "Geometry::cube_10", "Mesh" {
 		Vertices: *24 {
 			a: 0,6.25,6.25,0,6.25,-6.25,0,-6.25,6.25,0,-6.25,-6.25,-12.5,6.25,-6.25,-12.5,6.25,6.25,-12.5,-6.25,-6.25,-12.5,-6.25,6.25
 		}
@@ -2265,7 +2265,7 @@ Objects:  {
 			}
 		}
 	}
-	Model: 71357208, "Model::cube_11", "Mesh" {
+	Model: 78404154, "Model::cube_11", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "RotationActive", "bool", "", "",1
@@ -2280,7 +2280,7 @@ Objects:  {
 		Shading: Y
 		Culling: "CullingOff"
 	}
-	Geometry: 72835258, "Geometry::cube_11", "Mesh" {
+	Geometry: 73752680, "Geometry::cube_11", "Mesh" {
 		Vertices: *24 {
 			a: 12.5,6.25,6.25,12.5,6.25,-6.25,12.5,-6.25,6.25,12.5,-6.25,-6.25,0,6.25,-6.25,0,6.25,6.25,0,-6.25,-6.25,0,-6.25,6.25
 		}
@@ -2339,310 +2339,310 @@ Objects:  {
 Connections:  {
 
 	;Model::Body, Model::Monster
-	C: "OO",73403908,77195049
+	C: "OO",77494185,72142845
 
 	;Model::leg, Model::Monster
-	C: "OO",71797732,77195049
+	C: "OO",73295506,72142845
 
 	;Model::Monster, Model::RootNode
-	C: "OO",77195049,0
+	C: "OO",72142845,0
 
 	;Model::leg2, Model::Monster
-	C: "OO",73639023,77195049
+	C: "OO",70534746,72142845
 
 	;Model::arm, Model::Monster
-	C: "OO",77198010,77195049
+	C: "OO",72431024,72142845
 
 	;Model::arm2, Model::Monster
-	C: "OO",79019717,77195049
+	C: "OO",71560808,72142845
 
 	;Model::head, Model::Monster
-	C: "OO",76722026,77195049
+	C: "OO",76289274,72142845
 
 	;Model::InsideHead, Model::head
-	C: "OO",73460880,76722026
+	C: "OO",70703831,76289274
 
 	;Model::Mask, Model::InsideHead
-	C: "OO",74909415,73460880
+	C: "OO",76133482,70703831
 
 	;Model::Screws, Model::Mask
-	C: "OO",71506431,74909415
+	C: "OO",77292622,76133482
 
 	;Model::armature, Model::Monster
-	C: "OO",73558537,77195049
+	C: "OO",72923053,72142845
 
 	;NodeAttribute::armature, Model::armature
-	C: "OO",74792582,73558537
+	C: "OO",79764766,72923053
 
 	;Model::Spine, Model::armature
-	C: "OO",75499044,73558537
+	C: "OO",74655972,72923053
 
 	;NodeAttribute::Spine, Model::Spine
-	C: "OO",75915810,75499044
+	C: "OO",78679746,74655972
 
 	;Model::Chest, Model::Spine
-	C: "OO",74871414,75499044
+	C: "OO",79568421,74655972
 
 	;NodeAttribute::Chest, Model::Chest
-	C: "OO",73998015,74871414
+	C: "OO",74293925,79568421
 
 	;Model::RightShoulder, Model::Chest
-	C: "OO",79742985,74871414
+	C: "OO",71955924,79568421
 
 	;NodeAttribute::RightShoulder, Model::RightShoulder
-	C: "OO",73265729,79742985
+	C: "OO",73364896,71955924
 
 	;Model::RightUpperArm, Model::RightShoulder
-	C: "OO",70947011,79742985
+	C: "OO",71780049,71955924
 
 	;NodeAttribute::RightUpperArm, Model::RightUpperArm
-	C: "OO",76194801,70947011
+	C: "OO",79825752,71780049
 
 	;Model::RightLowerArm, Model::RightUpperArm
-	C: "OO",78438691,70947011
+	C: "OO",74003978,71780049
 
 	;NodeAttribute::RightLowerArm, Model::RightLowerArm
-	C: "OO",71879141,78438691
+	C: "OO",77901673,74003978
 
 	;Model::RightLowerArm_end, Model::RightLowerArm
-	C: "OO",75672949,78438691
+	C: "OO",70836507,74003978
 
 	;NodeAttribute::RightLowerArm_end, Model::RightLowerArm_end
-	C: "OO",76426929,75672949
+	C: "OO",74936615,70836507
 
 	;Model::LeftShoulder, Model::Chest
-	C: "OO",78603026,74871414
+	C: "OO",70782488,79568421
 
 	;NodeAttribute::LeftShoulder, Model::LeftShoulder
-	C: "OO",74840615,78603026
+	C: "OO",78496079,70782488
 
 	;Model::LeftUpperArm, Model::LeftShoulder
-	C: "OO",75996595,78603026
+	C: "OO",79532512,70782488
 
 	;NodeAttribute::LeftUpperArm, Model::LeftUpperArm
-	C: "OO",74024807,75996595
+	C: "OO",76686990,79532512
 
 	;Model::LeftUpperArm_end, Model::LeftUpperArm
-	C: "OO",79544724,75996595
+	C: "OO",70796719,79532512
 
 	;NodeAttribute::LeftUpperArm_end, Model::LeftUpperArm_end
-	C: "OO",74421882,79544724
+	C: "OO",70954456,70796719
 
 	;Model::Head, Model::Chest
-	C: "OO",76186382,74871414
+	C: "OO",73608215,79568421
 
 	;NodeAttribute::Head, Model::Head
-	C: "OO",72662021,76186382
+	C: "OO",71705488,73608215
 
 	;Model::Head_end, Model::Head
-	C: "OO",77036931,76186382
+	C: "OO",75028132,73608215
 
 	;NodeAttribute::Head_end, Model::Head_end
-	C: "OO",79326374,77036931
+	C: "OO",73446330,75028132
 
-	;Model::Hips, Model::Spine
-	C: "OO",73453777,75499044
+	;Model::Hips, Model::armature
+	C: "OO",77954755,72923053
 
 	;NodeAttribute::Hips, Model::Hips
-	C: "OO",71451464,73453777
+	C: "OO",71255681,77954755
 
 	;Model::LeftUpperLeg, Model::Hips
-	C: "OO",73842131,73453777
+	C: "OO",78040733,77954755
 
 	;NodeAttribute::LeftUpperLeg, Model::LeftUpperLeg
-	C: "OO",74110914,73842131
+	C: "OO",71025529,78040733
 
 	;Model::LeftLowerLeg, Model::LeftUpperLeg
-	C: "OO",79099042,73842131
+	C: "OO",74813718,78040733
 
 	;NodeAttribute::LeftLowerLeg, Model::LeftLowerLeg
-	C: "OO",76583806,79099042
+	C: "OO",73441280,74813718
 
 	;Model::LeftFoot, Model::LeftLowerLeg
-	C: "OO",74379699,79099042
+	C: "OO",71996230,74813718
 
 	;NodeAttribute::LeftFoot, Model::LeftFoot
-	C: "OO",77478425,74379699
+	C: "OO",73818530,71996230
 
 	;Model::LeftFoot_end, Model::LeftFoot
-	C: "OO",72850739,74379699
+	C: "OO",70524265,71996230
 
 	;NodeAttribute::LeftFoot_end, Model::LeftFoot_end
-	C: "OO",71522171,72850739
+	C: "OO",73206394,70524265
 
 	;Model::RightUpperLeg, Model::Hips
-	C: "OO",74091125,73453777
+	C: "OO",72306578,77954755
 
 	;NodeAttribute::RightUpperLeg, Model::RightUpperLeg
-	C: "OO",71306546,74091125
+	C: "OO",71801179,72306578
 
 	;Model::RightLowerLeg, Model::RightUpperLeg
-	C: "OO",71265261,74091125
+	C: "OO",75233097,72306578
 
 	;NodeAttribute::RightLowerLeg, Model::RightLowerLeg
-	C: "OO",74427979,71265261
+	C: "OO",76204137,75233097
 
 	;Model::RightFoot, Model::RightLowerLeg
-	C: "OO",79906373,71265261
+	C: "OO",78815431,75233097
 
 	;NodeAttribute::RightFoot, Model::RightFoot
-	C: "OO",74755646,79906373
+	C: "OO",72348649,78815431
 
 	;Model::RightFoot_end, Model::RightFoot
-	C: "OO",73847389,79906373
+	C: "OO",78725820,78815431
 
 	;NodeAttribute::RightFoot_end, Model::RightFoot_end
-	C: "OO",79655484,73847389
+	C: "OO",79429728,78725820
 
 	;Model::torso, Model::Body
-	C: "OO",70030105,73403908
+	C: "OO",70555708,77494185
 
 	;Geometry::torso, Model::torso
-	C: "OO",77164174,70030105
+	C: "OO",76037754,70555708
 
 	;Model::stomach, Model::Body
-	C: "OO",78957718,73403908
+	C: "OO",79644596,77494185
 
 	;Geometry::stomach, Model::stomach
-	C: "OO",79673882,78957718
+	C: "OO",76265691,79644596
 
 	;Model::thigh, Model::leg
-	C: "OO",73977823,71797732
+	C: "OO",79006404,73295506
 
 	;Geometry::thigh, Model::thigh
-	C: "OO",79511434,73977823
+	C: "OO",73897629,79006404
 
 	;Model::bottom, Model::leg
-	C: "OO",73723591,71797732
+	C: "OO",73113803,73295506
 
 	;Geometry::bottom, Model::bottom
-	C: "OO",76041270,73723591
+	C: "OO",73351734,73113803
 
 	;Model::foot, Model::leg
-	C: "OO",71947051,71797732
+	C: "OO",78291170,73295506
 
 	;Geometry::foot, Model::foot
-	C: "OO",79605688,71947051
+	C: "OO",76537382,78291170
 
 	;Model::thigh_1, Model::leg2
-	C: "OO",70540647,73639023
+	C: "OO",77210673,70534746
 
 	;Geometry::thigh_1, Model::thigh_1
-	C: "OO",72926842,70540647
+	C: "OO",76176616,77210673
 
 	;Model::bottom_1, Model::leg2
-	C: "OO",75853157,73639023
+	C: "OO",79260272,70534746
 
 	;Geometry::bottom_1, Model::bottom_1
-	C: "OO",76288164,75853157
+	C: "OO",74247508,79260272
 
 	;Model::foot_1, Model::leg2
-	C: "OO",72650361,73639023
+	C: "OO",77460226,70534746
 
 	;Geometry::foot_1, Model::foot_1
-	C: "OO",71395923,72650361
+	C: "OO",71930492,77460226
 
 	;Model::backarm, Model::arm
-	C: "OO",73714688,77198010
+	C: "OO",75627032,72431024
 
 	;Geometry::backarm, Model::backarm
-	C: "OO",71435953,73714688
+	C: "OO",70294161,75627032
 
 	;Model::forearm, Model::arm
-	C: "OO",74641427,77198010
+	C: "OO",71587971,72431024
 
 	;Geometry::forearm, Model::forearm
-	C: "OO",73832736,74641427
+	C: "OO",70693825,71587971
 
 	;Model::backarm_1, Model::arm2
-	C: "OO",71483624,79019717
+	C: "OO",77649685,71560808
 
 	;Geometry::backarm_1, Model::backarm_1
-	C: "OO",77966518,71483624
+	C: "OO",72976634,77649685
 
 	;Model::bone, Model::arm2
-	C: "OO",73764419,79019717
+	C: "OO",78765465,71560808
 
 	;Geometry::bone, Model::bone
-	C: "OO",75856556,73764419
+	C: "OO",79359850,78765465
 
 	;Model::black, Model::InsideHead
-	C: "OO",76023962,73460880
+	C: "OO",77624375,70703831
 
 	;Geometry::black, Model::black
-	C: "OO",78064045,76023962
+	C: "OO",77054810,77624375
 
 	;Model::cube, Model::Mask
-	C: "OO",75605147,74909415
+	C: "OO",77726360,76133482
 
 	;Geometry::cube, Model::cube
-	C: "OO",77397758,75605147
+	C: "OO",70930867,77726360
 
 	;Model::cube_1, Model::Mask
-	C: "OO",72655565,74909415
+	C: "OO",70688089,76133482
 
 	;Geometry::cube_1, Model::cube_1
-	C: "OO",74164553,72655565
+	C: "OO",76447545,70688089
 
 	;Model::cube_2, Model::Mask
-	C: "OO",72747379,74909415
+	C: "OO",75749181,76133482
 
 	;Geometry::cube_2, Model::cube_2
-	C: "OO",70807902,72747379
+	C: "OO",70746357,75749181
 
 	;Model::cube_3, Model::Mask
-	C: "OO",74642145,74909415
+	C: "OO",77389405,76133482
 
 	;Geometry::cube_3, Model::cube_3
-	C: "OO",71480709,74642145
+	C: "OO",75821494,77389405
 
 	;Model::cube_4, Model::Mask
-	C: "OO",75898929,74909415
+	C: "OO",75461956,76133482
 
 	;Geometry::cube_4, Model::cube_4
-	C: "OO",77838237,75898929
+	C: "OO",70779321,75461956
 
 	;Model::cube_5, Model::Mask
-	C: "OO",79196707,74909415
+	C: "OO",74063807,76133482
 
 	;Geometry::cube_5, Model::cube_5
-	C: "OO",72158866,79196707
+	C: "OO",79051812,74063807
 
 	;Model::cube_6, Model::Mask
-	C: "OO",76141444,74909415
+	C: "OO",71288295,76133482
 
 	;Geometry::cube_6, Model::cube_6
-	C: "OO",73572480,76141444
+	C: "OO",70522592,71288295
 
 	;Model::cube_7, Model::Mask
-	C: "OO",71018626,74909415
+	C: "OO",77011289,76133482
 
 	;Geometry::cube_7, Model::cube_7
-	C: "OO",78536566,71018626
+	C: "OO",70762735,77011289
 
 	;Model::cube_8, Model::Mask
-	C: "OO",74224570,74909415
+	C: "OO",77038741,76133482
 
 	;Geometry::cube_8, Model::cube_8
-	C: "OO",78519372,74224570
+	C: "OO",72749427,77038741
 
 	;Model::cube_9, Model::Mask
-	C: "OO",73295217,74909415
+	C: "OO",70535273,76133482
 
 	;Geometry::cube_9, Model::cube_9
-	C: "OO",79439454,73295217
+	C: "OO",70264952,70535273
 
 	;Model::cube_10, Model::Screws
-	C: "OO",70404849,71506431
+	C: "OO",76731280,77292622
 
 	;Geometry::cube_10, Model::cube_10
-	C: "OO",72359956,70404849
+	C: "OO",70375448,76731280
 
 	;Model::cube_11, Model::Screws
-	C: "OO",71357208,71506431
+	C: "OO",78404154,77292622
 
 	;Geometry::cube_11, Model::cube_11
-	C: "OO",72835258,71357208
+	C: "OO",73752680,78404154
 }
 
 ; Takes section
