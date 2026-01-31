@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 6764052510340537381}
   - component: {fileID: 6091226117386821280}
   - component: {fileID: 2699233990672741756}
-  m_Layer: 9
+  - component: {fileID: 7469796134784320676}
+  m_Layer: 7
   m_Name: TallBox
-  m_TagString: Untagged
+  m_TagString: CanBeTaken
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,6 +83,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7469796134784320676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4721075266464237784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c60093b873249e341be530913cc1a479, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ThrowObjectScript
+  sizemultiplier: 0.8
+  isclue: 0
+  SFXID: 0
+  GrabSFX: {fileID: 0}
+  CrasHSFX: {fileID: 0}
 --- !u!1001 &8861111265099938842
 PrefabInstance:
   m_ObjectHideFlags: 0
