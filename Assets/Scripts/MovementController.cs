@@ -164,7 +164,7 @@ public class MovementController : MonoBehaviour
         if (FlashLightToggle.ReadValue<float>() != 0f && previousflashlightstate == 0f)
         {
             Light.enabled = !Light.enabled;
-            SoundManager.instance.PlaySFX(flashlight, 0.1f);
+            SoundManager.instance.PlaySFX(flashlight, 0.1f, transform.position);
         }
 
 

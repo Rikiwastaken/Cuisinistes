@@ -130,7 +130,7 @@ public class PickUpObjects : MonoBehaviour
         if (CurrentObjectPickedUp == null)
         {
             GameObject closestobj = FindCloset();
-            if (closestobj != null)
+            if (closestobj != null && !closestobj.GetComponent<ThrowObjectScript>().isclue)
             {
                 PickUpObject(closestobj);
             }
@@ -146,7 +146,7 @@ public class PickUpObjects : MonoBehaviour
     }
     public void PickUpObject(GameObject obj)
     {
-        SoundManager.PlaySFX(obj.GetComponent<ThrowObjectScript>().GrabSFX, 0.05f);
+        SoundManager.PlaySFX(obj.GetComponent<ThrowObjectScript>().GrabSFX, 0.05f, transform.position);
 
         CurrentObjectPickedUp = obj;
         CurrentObjectPickedUp.transform.parent = ObjectHolder;
@@ -160,7 +160,7 @@ public class PickUpObjects : MonoBehaviour
     {
         if (CurrentObjectPickedUp != null)
         {
-            SoundManager.PlaySFX(throwObjectSFX, 0.05f);
+            SoundManager.PlaySFX(throwObjectSFX, 0.05f, transform.position);
             Rigidbody RB = CurrentObjectPickedUp.GetComponentInChildren<Rigidbody>();
             RB.isKinematic = false;
             CurrentObjectPickedUp.transform.parent = null;
