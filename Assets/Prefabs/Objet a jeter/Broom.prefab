@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7475989459164088020}
   - component: {fileID: 1881212601298779906}
   - component: {fileID: 2929349971070413665}
+  - component: {fileID: -4779866236405614265}
   m_Layer: 7
   m_Name: Broom
   m_TagString: CanBeTaken
@@ -82,6 +83,23 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.124267936, y: 1.4874793, z: 0.1394434}
   m_Center: {x: 0.005166948, y: 0.8806377, z: 0.0036129951}
+--- !u!114 &-4779866236405614265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3905395453109789705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c60093b873249e341be530913cc1a479, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ThrowObjectScript
+  sizemultiplier: 0.95
+  isclue: 0
+  SFXID: 0
+  GrabSFX: {fileID: 0}
+  CrasHSFX: {fileID: 0}
 --- !u!1001 &3472734773457793780
 PrefabInstance:
   m_ObjectHideFlags: 0
