@@ -49,6 +49,25 @@ MonoBehaviour:
   SFXHolder: {fileID: 6302720074626973253}
   AudioMixer: {fileID: 24100000, guid: 1fed9e8d07beba74f8381dcc789c15c2, type: 2}
   SFXVol: 1
+  GrabSFXList:
+  - objectID: 0
+    GrabSFX: {fileID: 8300000, guid: bf0a6ba163870d94b86cf1643946266c, type: 3}
+    CrashSFX: {fileID: 8300000, guid: c56db3290be8ab94a8f3d5215843527b, type: 3}
+  - objectID: 1
+    GrabSFX: {fileID: 8300000, guid: 92fd2ee0cb5a2d8489d08008a8cdfe02, type: 3}
+    CrashSFX: {fileID: 8300000, guid: 4be44c4f4dc96734d9f876c2aa0456d7, type: 3}
+  - objectID: 2
+    GrabSFX: {fileID: 8300000, guid: d2dc0571c465e2545ad2c13d09a40644, type: 3}
+    CrashSFX: {fileID: 8300000, guid: 14c72a5ea12d2af4ba6d09ec20ecf046, type: 3}
+  - objectID: 3
+    GrabSFX: {fileID: 8300000, guid: eda35e079cb1fff48a90af302cb01c26, type: 3}
+    CrashSFX: {fileID: 8300000, guid: 05e2c622f686a55499e3ad15f664e7ec, type: 3}
+  - objectID: 4
+    GrabSFX: {fileID: 8300000, guid: c6a6371a73cb496458489438d8b537c8, type: 3}
+    CrashSFX: {fileID: 8300000, guid: 85eeb790b779ed2498edb9923f0325f9, type: 3}
+  - objectID: 5
+    GrabSFX: {fileID: 8300000, guid: 6c741cd4613f3d542a95725e42f31654, type: 3}
+    CrashSFX: {fileID: 8300000, guid: 60a6de94f25ccc042b9f6dcf346222f0, type: 3}
 --- !u!114 &8268123039953800461
 MonoBehaviour:
   m_ObjectHideFlags: 0

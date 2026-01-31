@@ -11,7 +11,9 @@ public class UnderLineCloseObjects : MonoBehaviour
 
     public GameObject[] objectspickable;
 
-    public Material outlinematerial;
+    public Material outlinematerialForPickable;
+    public Material outlinematerialForClue;
+
 
     public LayerMask layermask;
 
@@ -35,7 +37,6 @@ public class UnderLineCloseObjects : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, maxdistanceforraycast, layermask))
             {
-                Debug.Log(hit.collider.name);
                 if (hit.collider.transform.tag == pickableTag)
                 {
                     AddMaterial(obj);
@@ -62,11 +63,23 @@ public class UnderLineCloseObjects : MonoBehaviour
         {
             var mats = mesh.sharedMaterials.ToList();
 
-            if (!mats.Contains(outlinematerial))
+            if (obj.GetComponent<ThrowObjectScript>() != null && obj.GetComponent<ThrowObjectScript>().isclue)
             {
-                mats.Add(outlinematerial);
-                mesh.sharedMaterials = mats.ToArray();
+                if (!mats.Contains(outlinematerialForClue))
+                {
+                    mats.Add(outlinematerialForClue);
+                    mesh.sharedMaterials = mats.ToArray();
+                }
             }
+            else
+            {
+                if (!mats.Contains(outlinematerialForPickable))
+                {
+                    mats.Add(outlinematerialForPickable);
+                    mesh.sharedMaterials = mats.ToArray();
+                }
+            }
+
         }
     }
 
@@ -77,9 +90,17 @@ public class UnderLineCloseObjects : MonoBehaviour
         {
             var mats = mesh.sharedMaterials.ToList();
 
-            if (mats.Contains(outlinematerial))
+            if (mats.Contains(outlinematerialForClue))
             {
-                mats.Remove(outlinematerial);
+                mats.Remove(outlinematerialForClue);
+                mesh.sharedMaterials = mats.ToArray();
+            }
+
+            mats = mesh.sharedMaterials.ToList();
+
+            if (mats.Contains(outlinematerialForPickable))
+            {
+                mats.Remove(outlinematerialForPickable);
                 mesh.sharedMaterials = mats.ToArray();
             }
         }
