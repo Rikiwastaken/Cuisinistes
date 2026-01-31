@@ -24,6 +24,9 @@ public class MovementController : MonoBehaviour
 
     private float previousflashlightstate;
 
+    public AudioClip flashlight;
+
+
     [Header("Arm Sway")]
 
     public float swaymax;
@@ -117,6 +120,7 @@ public class MovementController : MonoBehaviour
         if (FlashLightToggle.ReadValue<float>() != 0f && previousflashlightstate == 0f)
         {
             Light.enabled = !Light.enabled;
+            SoundManager.instance.PlaySFX(flashlight, 0.1f);
         }
 
 

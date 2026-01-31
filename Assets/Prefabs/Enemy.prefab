@@ -404,7 +404,7 @@ MonoBehaviour:
   staystimecounter: -1
   notmoveing: 0
   stunframes: 0
-  basestun: 3
+  basestun: 5
   timebeforegiveupchase: 5
   timebeforegiveupchaseCounter: 0
   chasedetectiondistance: 20
