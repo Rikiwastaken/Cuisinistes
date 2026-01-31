@@ -18,6 +18,12 @@ public class MovementController : MonoBehaviour
 
     public Transform handtransform;
 
+    [Header("FlashLight")]
+
+    private InputAction FlashLightToggle;
+
+    private float previousflashlightstate;
+
     [Header("Arm Sway")]
 
     public float swaymax;
@@ -27,6 +33,14 @@ public class MovementController : MonoBehaviour
     public float changeperframe;
 
     private float baseYHand;
+
+    [Header("Light Cone Variables")]
+    public Light Light;
+
+    public float maxangle;
+    private float lightrange;
+    public LayerMask enemylayer;
+    public LayerMask ObsctacleLayer;
 
     [Header("Enemy Close Visuals")]
     public Volume EnemyCloseVolume;
@@ -46,11 +60,11 @@ public class MovementController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         MoveAction = InputSystem.actions.FindAction("Move");
+        FlashLightToggle = InputSystem.actions.FindAction("FlashLight");
         baseYHand = handtransform.localPosition.y;
     }
 
-    // Update is called once per frame
-    // Update is called once per frame
+
     void Update()
     {
 
@@ -96,6 +110,18 @@ public class MovementController : MonoBehaviour
             rb.linearVelocity = Vector3.Lerp(rb.linearVelocity, Vector3.zero, 0.5f);
         }
 
+
+        // FlashLight
+
+
+        if (FlashLightToggle.ReadValue<float>() != 0f && previousflashlightstate == 0f)
+        {
+            Light.enabled = !Light.enabled;
+        }
+
+
+        previousflashlightstate = FlashLightToggle.ReadValue<float>();
+
         //enemyclose visuals
 
         float distancetoenemy = Vector3.Distance(EnemyController.instance.transform.position, transform.position);
@@ -108,6 +134,45 @@ public class MovementController : MonoBehaviour
         {
             EnemyCloseVolume.weight = 0f;
         }
+
+        //Manage Enemy seeing Light
+        if (Light.enabled)
+        {
+            if (checkifenemyislit())
+            {
+                EnemyController.instance.seeingplayer = true;
+            }
+        }
+
+
+    }
+    private bool checkifenemyislit()
+    {
+        lightrange = Light.range * 0.9f;
+        Vector3 enemypos = EnemyController.instance.transform.position;
+
+        if (Vector3.Distance(enemypos, Light.transform.position) > lightrange)
+        {
+            return false;
+        }
+        Vector3 toenemy = enemypos - Light.transform.position;
+
+        //Check angle for alignment
+        Vector3 directionToEnemy = toenemy.normalized;
+        float angle = Vector3.Angle(Light.transform.forward, directionToEnemy);
+        if (angle > maxangle / 2f)
+        {
+            return false;
+        }
+        //Raycast
+        if (Physics.Raycast(Light.transform.position, directionToEnemy, out RaycastHit hit, lightrange, ObsctacleLayer | enemylayer))
+        {
+            if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+            {
+                return true;
+            }
+        }
+        return false;
 
     }
 }

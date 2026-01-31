@@ -14,9 +14,9 @@ TagManager:
   - UI
   - Decor
   - CanBeTaken
-  - 
-  - 
-  - 
+  - Player
+  - Obstacle
+  - Enemy
   - 
   - 
   - 
