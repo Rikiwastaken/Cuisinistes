@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4752206896338288618}
   - component: {fileID: 4720023436955076879}
   - component: {fileID: 4306913886936976161}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Eye1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 1748190866391917856}
   - component: {fileID: 329513215741351088}
   - component: {fileID: 1428192174741808136}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sphere (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 4508603366065907535}
   - component: {fileID: 5914955687967417232}
   - component: {fileID: 5091723332912425712}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -409,6 +409,7 @@ MonoBehaviour:
   timebeforegiveupchaseCounter: 0
   chasedetectiondistance: 20
   chaseviewradius: 120
+  delaybetweenchecks: 0.25
   debug: 1
 --- !u!195 &4508603366065907535
 NavMeshAgent:
@@ -538,7 +539,7 @@ GameObject:
   - component: {fileID: 5136633200078437033}
   - component: {fileID: 9195797662420157742}
   - component: {fileID: 2758156605198263490}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Eye2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -651,7 +652,7 @@ GameObject:
   - component: {fileID: 3423831626392609388}
   - component: {fileID: 3066392706743160198}
   - component: {fileID: 3157256967685042479}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sphere (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

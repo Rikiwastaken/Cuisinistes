@@ -53,6 +53,9 @@ public class EnemyController : MonoBehaviour
 
     public float chaseviewradius;
 
+    public float delaybetweenchecks;
+    private int delaybetweenchecksCounter;
+
     [Header("Debug")]
 
     public bool debug;
@@ -124,7 +127,18 @@ public class EnemyController : MonoBehaviour
             stunframes--;
         }
 
-        seeingplayer = isplayerdetected();
+
+        if (delaybetweenchecksCounter == 0)
+        {
+            seeingplayer = isplayerdetected();
+            delaybetweenchecksCounter = (int)(delaybetweenchecks / Time.deltaTime);
+        }
+        else
+        {
+            delaybetweenchecksCounter--;
+        }
+
+
 
         if (seeingplayer && !chasing)
         {

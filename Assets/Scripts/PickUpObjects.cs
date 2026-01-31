@@ -92,7 +92,6 @@ public class PickUpObjects : MonoBehaviour
     }
     public void PickUpObject(GameObject obj)
     {
-
         SoundManager.PlaySFX(obj.GetComponent<ThrowObjectScript>().GrabSFX, 0.05f);
 
         CurrentObjectPickedUp = obj;
