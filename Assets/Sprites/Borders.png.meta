@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 67d22cd1058040b42ae37ba30cf00fc8
+guid: ea11ee4e3ed16f943b18cc5e8cfebf81
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -95,12 +95,78 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Borders_0
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 777
+        width: 440
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 22, y: 22, z: 22, w: 22}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13aec33f3307c7949b41d6c8e74eb29a
+      internalID: -222668419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders_1
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 122
+        width: 328
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 72, y: 72, z: 72, w: 72}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fa8aeed7bb8eb945a015f8167636f93
+      internalID: -1737963805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Borders_2
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 133
+        width: 432
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 130, y: 130, z: 130, w: 130}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06701efdd58679049a83d093bbb939dd
+      internalID: 1854042955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 3fcfd940af11e694ab10bf4455360112
     internalID: 0
     vertices: []
     indices: 
@@ -109,7 +175,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Borders_0: -222668419
+      Borders_1: -1737963805
+      Borders_2: 1854042955
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
