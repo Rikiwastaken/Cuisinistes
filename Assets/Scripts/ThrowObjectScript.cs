@@ -8,7 +8,7 @@ public class ThrowObjectScript : MonoBehaviour
     {
         if (CDBeforeFirstSound == 100000)
         {
-            SoundManager.instance.PlaySFX(CrasHSFX, 0.15f);
+            SoundManager.instance.PlaySFX(CrasHSFX, 0.25f);
             CDBeforeFirstSound = 0;
         }
 

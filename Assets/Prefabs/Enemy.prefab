@@ -57,7 +57,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -126,6 +126,7 @@ MonoBehaviour:
   chaseviewradius: 120
   delaybetweenchecks: 0.25
   debug: 1
+  pushforce: 4
 --- !u!195 &4508603366065907535
 NavMeshAgent:
   m_ObjectHideFlags: 0

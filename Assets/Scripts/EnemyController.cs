@@ -59,13 +59,27 @@ public class EnemyController : MonoBehaviour
     [Header("Debug")]
 
     public bool debug;
+    public float pushforce;
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.transform.CompareTag("CanBeTaken") && collision.transform.GetComponent<ThrowObjectScript>() && collision.transform.GetComponentInChildren<Rigidbody>().linearVelocity.magnitude >= 0.2f)
+        if (collision.transform.CompareTag("CanBeTaken") && collision.transform.GetComponent<ThrowObjectScript>())
         {
-            stunframes = (int)(basestun / (Time.deltaTime * collision.transform.GetComponent<ThrowObjectScript>().sizemultiplier));
+            if (collision.transform.GetComponentInChildren<Rigidbody>().linearVelocity.magnitude >= 0.2f)
+            {
+                stunframes = (int)(basestun / (Time.deltaTime * collision.transform.GetComponent<ThrowObjectScript>().sizemultiplier));
+            }
+            else
+            {
+                Vector3 direction = collision.transform.position - transform.position + new Vector3(0, 1, 0);
+                direction.Normalize();
+
+                collision.transform.GetComponent<Rigidbody>().AddForce(direction * pushforce, ForceMode.Impulse);
+            }
+
         }
+
+
     }
 
 
