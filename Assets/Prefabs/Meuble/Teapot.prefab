@@ -1,0 +1,125 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1011812986158103401
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5795924944543948787}
+  m_Layer: 0
+  m_Name: Teapot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5795924944543948787
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011812986158103401}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.75797, y: 0.93632, z: 11.31123}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 711977859656888059}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1039149994901752080
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5795924944543948787}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 6163a704224ba1fc89822406bc073fd9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.8630297
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6163a704224ba1fc89822406bc073fd9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.035319984
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6163a704224ba1fc89822406bc073fd9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.32022953
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6163a704224ba1fc89822406bc073fd9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70036083
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6163a704224ba1fc89822406bc073fd9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6163a704224ba1fc89822406bc073fd9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.71378905
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6163a704224ba1fc89822406bc073fd9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6163a704224ba1fc89822406bc073fd9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6163a704224ba1fc89822406bc073fd9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -91.088
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6163a704224ba1fc89822406bc073fd9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6163a704224ba1fc89822406bc073fd9, type: 3}
+      propertyPath: m_Name
+      value: Teapot
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6163a704224ba1fc89822406bc073fd9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1848223180720129579}
+  m_SourcePrefab: {fileID: 100100000, guid: 6163a704224ba1fc89822406bc073fd9, type: 3}
+--- !u!1 &192147060646671425 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6163a704224ba1fc89822406bc073fd9, type: 3}
+  m_PrefabInstance: {fileID: 1039149994901752080}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1848223180720129579
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192147060646671425}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.32947373, y: 0.4042285, z: 0.35721236}
+  m_Center: {x: -0.00071203336, y: 0.17007294, z: 0.0018120185}
+--- !u!4 &711977859656888059 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6163a704224ba1fc89822406bc073fd9, type: 3}
+  m_PrefabInstance: {fileID: 1039149994901752080}
+  m_PrefabAsset: {fileID: 0}
