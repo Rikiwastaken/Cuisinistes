@@ -47,6 +47,11 @@ public class MovementController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         MoveAction = InputSystem.actions.FindAction("Move");
         baseYHand = handtransform.localPosition.y;
+        if (EnemyController.instance != null)
+        {
+            // Physics.IgnoreCollision(GetComponent<CapsuleCollider>(), EnemyController.instance.GetComponent<CapsuleCollider>());
+        }
+
     }
 
     // Update is called once per frame

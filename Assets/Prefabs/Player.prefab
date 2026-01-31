@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2934431466760174378}
   - component: {fileID: 4621519054838727033}
   - component: {fileID: 5983728253757748932}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 4361020652924776066}
   - component: {fileID: 210498859533001623}
   - component: {fileID: 2424790202694058361}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 4294967295
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 1
@@ -300,7 +300,7 @@ GameObject:
   - component: {fileID: 1626375850677786430}
   - component: {fileID: 9190491551218582027}
   - component: {fileID: 4404718613862759508}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -479,6 +479,7 @@ MonoBehaviour:
   ObjectHolder: {fileID: 2342930416416423700}
   throwforce: 10
   cam: {fileID: 7473135373630052200}
+  interactCD: 1
 --- !u!1 &6965929437208380735
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,7 +491,7 @@ GameObject:
   - component: {fileID: 6342192700532911563}
   - component: {fileID: 1971853196393027489}
   - component: {fileID: 3425201580950116927}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -615,7 +616,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2342930416416423700}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ObjectHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -687,7 +688,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8469990867830010200, guid: 00ba0f56429f2cb6490ea9f586c7a300, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 00ba0f56429f2cb6490ea9f586c7a300, type: 3}
       propertyPath: m_Name
@@ -695,11 +696,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 00ba0f56429f2cb6490ea9f586c7a300, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2766212503428324877, guid: 00ba0f56429f2cb6490ea9f586c7a300, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -768,7 +769,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a0ba6a6f2b1c0c8dc8ed88c03098be4d, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

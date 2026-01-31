@@ -14,6 +14,10 @@ public class PickUpObjects : MonoBehaviour
 
     private InputAction interractInput;
 
+    public float interactCD;
+
+    private int InteractCDCounter;
+
     private void Start()
     {
         interractInput = InputSystem.actions.FindAction("Interact");
@@ -37,11 +41,23 @@ public class PickUpObjects : MonoBehaviour
             Interact();
         }
 
+        if (InteractCDCounter > 0)
+        {
+            InteractCDCounter--;
+        }
+
     }
 
     private void Interact()
     {
-        Debug.Log("interact");
+        if (InteractCDCounter == 0)
+        {
+            InteractCDCounter = (int)(interactCD / Time.deltaTime);
+        }
+        else
+        {
+            return;
+        }
         if (CurrentObjectPickedUp == null)
         {
             float mindist = GetComponent<UnderLineCloseObjects>().minimaldistance;
@@ -76,6 +92,7 @@ public class PickUpObjects : MonoBehaviour
         Rigidbody RB = CurrentObjectPickedUp.GetComponentInChildren<Rigidbody>();
         RB.isKinematic = true;
         CurrentObjectPickedUp.transform.localPosition = Vector3.zero;
+        CurrentObjectPickedUp.transform.localRotation = Quaternion.identity;
     }
 
     public void throwObject()
@@ -86,7 +103,7 @@ public class PickUpObjects : MonoBehaviour
             Rigidbody RB = CurrentObjectPickedUp.GetComponentInChildren<Rigidbody>();
             RB.isKinematic = false;
             CurrentObjectPickedUp.transform.parent = null;
-            RB.AddForce(cam.forward * throwforce, ForceMode.Impulse);
+            RB.AddForce(cam.forward * throwforce * CurrentObjectPickedUp.GetComponent<ThrowObjectScript>().sizemultiplier, ForceMode.Impulse);
             CurrentObjectPickedUp = null;
         }
     }
