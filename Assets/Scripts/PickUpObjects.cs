@@ -18,8 +18,13 @@ public class PickUpObjects : MonoBehaviour
 
     private int InteractCDCounter;
 
+    private SoundManager SoundManager;
+
+    public AudioClip throwObjectSFX;
+
     private void Start()
     {
+        SoundManager = SoundManager.instance;
         interractInput = InputSystem.actions.FindAction("Interact");
     }
 
@@ -87,6 +92,9 @@ public class PickUpObjects : MonoBehaviour
     }
     public void PickUpObject(GameObject obj)
     {
+
+        SoundManager.PlaySFX(obj.GetComponent<ThrowObjectScript>().GrabSFX, 0.05f);
+
         CurrentObjectPickedUp = obj;
         CurrentObjectPickedUp.transform.parent = ObjectHolder;
         Rigidbody RB = CurrentObjectPickedUp.GetComponentInChildren<Rigidbody>();
@@ -99,7 +107,7 @@ public class PickUpObjects : MonoBehaviour
     {
         if (CurrentObjectPickedUp != null)
         {
-
+            SoundManager.PlaySFX(throwObjectSFX, 0.05f);
             Rigidbody RB = CurrentObjectPickedUp.GetComponentInChildren<Rigidbody>();
             RB.isKinematic = false;
             CurrentObjectPickedUp.transform.parent = null;
