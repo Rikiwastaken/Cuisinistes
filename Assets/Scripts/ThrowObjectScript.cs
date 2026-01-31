@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using static SoundManager;
 
@@ -14,6 +15,7 @@ public class ThrowObjectScript : MonoBehaviour
 
     }
 
+    public List<int> clueOwnerIndex; // 0 : policier, 1 : drogué, 2 : infirmière, 3 : paysan, 4 : cambrioleur
 
     public float sizemultiplier;
 

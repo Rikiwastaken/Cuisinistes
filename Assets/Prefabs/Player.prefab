@@ -437,7 +437,7 @@ MonoBehaviour:
   CameraTransform: {fileID: 7473135373630052200}
   speed: 5
   handtransform: {fileID: 7688713531097435845}
-  flashlight: {fileID: 8300000, guid: 1b7e2323d2323b645b1b275e3c43ff8f, type: 3}
+  flashlight: {fileID: 8300000, guid: bf6fd173ff2ff5c488c42a77175feb25, type: 3}
   swaymax: 0.01
   changeperframe: 0.1
   Light: {fileID: 1971853196393027489}

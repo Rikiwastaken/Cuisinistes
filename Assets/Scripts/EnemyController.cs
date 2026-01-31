@@ -168,7 +168,8 @@ public class EnemyController : MonoBehaviour
             notmoveing = 0;
         }
 
-
+        GetComponentInChildren<Animator>().SetFloat("speed", agent.velocity.magnitude);
+        Debug.Log(GetComponentInChildren<Animator>().GetFloat("speed"));
     }
 
 
