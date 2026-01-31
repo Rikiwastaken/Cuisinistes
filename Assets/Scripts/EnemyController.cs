@@ -242,7 +242,7 @@ public class EnemyController : MonoBehaviour
 
     private void ManageLightShape(float range, float angle)
     {
-        Light light = GetComponent<Light>();
+        Light light = GetComponentInChildren<Light>();
 
         light.range = range;
         light.innerSpotAngle = angle / 2;

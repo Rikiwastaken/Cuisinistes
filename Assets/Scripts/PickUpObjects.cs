@@ -62,7 +62,7 @@ public class PickUpObjects : MonoBehaviour
         if (clickInput.ReadValue<float>() == 1f)
         {
             GameObject closestobj = FindCloset();
-            if (closestobj != null && closestobj.GetComponent<ThrowObjectScript>().isclue)
+            if (closestobj != null && closestobj.GetComponent<ThrowObjectScript>() != null && closestobj.GetComponent<ThrowObjectScript>().isclue)
             {
                 currentpickingup++;
 
