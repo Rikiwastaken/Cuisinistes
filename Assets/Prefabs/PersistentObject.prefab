@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4544570467286569346}
   - component: {fileID: 7238000042910068593}
   - component: {fileID: 8268123039953800461}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PersistentObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,23 +51,26 @@ MonoBehaviour:
   SFXVol: 1
   GrabSFXList:
   - objectID: 0
-    GrabSFX: {fileID: 8300000, guid: bf0a6ba163870d94b86cf1643946266c, type: 3}
-    CrashSFX: {fileID: 8300000, guid: c56db3290be8ab94a8f3d5215843527b, type: 3}
+    GrabSFX: {fileID: 8300000, guid: 649966eba4167f4b2b1f5540393ce950, type: 3}
+    CrashSFX: {fileID: 8300000, guid: febdd8294b4de3cf2b40538135068c24, type: 3}
   - objectID: 1
     GrabSFX: {fileID: 8300000, guid: 92fd2ee0cb5a2d8489d08008a8cdfe02, type: 3}
-    CrashSFX: {fileID: 8300000, guid: 4be44c4f4dc96734d9f876c2aa0456d7, type: 3}
+    CrashSFX: {fileID: 8300000, guid: fc6c8bf834b1a408992b93b263e6848d, type: 3}
   - objectID: 2
-    GrabSFX: {fileID: 8300000, guid: d2dc0571c465e2545ad2c13d09a40644, type: 3}
-    CrashSFX: {fileID: 8300000, guid: 14c72a5ea12d2af4ba6d09ec20ecf046, type: 3}
+    GrabSFX: {fileID: 8300000, guid: 0dd5b00fae29825d8865d1499347a7d8, type: 3}
+    CrashSFX: {fileID: 8300000, guid: 20f7867dce7b9b8eda2c56f6c3eaf046, type: 3}
   - objectID: 3
-    GrabSFX: {fileID: 8300000, guid: eda35e079cb1fff48a90af302cb01c26, type: 3}
-    CrashSFX: {fileID: 8300000, guid: 05e2c622f686a55499e3ad15f664e7ec, type: 3}
+    GrabSFX: {fileID: 8300000, guid: 30fbf1b19b9094477bc7148ca31fd410, type: 3}
+    CrashSFX: {fileID: 8300000, guid: b9d553725542b16b88f8ec8c4d1fb469, type: 3}
   - objectID: 4
-    GrabSFX: {fileID: 8300000, guid: c6a6371a73cb496458489438d8b537c8, type: 3}
-    CrashSFX: {fileID: 8300000, guid: 85eeb790b779ed2498edb9923f0325f9, type: 3}
+    GrabSFX: {fileID: 8300000, guid: e19f1509ea945d6a8861a02411a28205, type: 3}
+    CrashSFX: {fileID: 8300000, guid: b433af4faa047bc8c801dbc0c94e415b, type: 3}
   - objectID: 5
-    GrabSFX: {fileID: 8300000, guid: 6c741cd4613f3d542a95725e42f31654, type: 3}
-    CrashSFX: {fileID: 8300000, guid: 60a6de94f25ccc042b9f6dcf346222f0, type: 3}
+    GrabSFX: {fileID: 8300000, guid: da4a9ea71824389e395253f1e096136b, type: 3}
+    CrashSFX: {fileID: 8300000, guid: 300beaf41681a33489af491591a2df04, type: 3}
+  - objectID: 5
+    GrabSFX: {fileID: 8300000, guid: 18b74ab24c82f9c2ba1d390c21571023, type: 3}
+    CrashSFX: {fileID: 8300000, guid: 9af7ac18b52bea270ac1504c7346149f, type: 3}
 --- !u!114 &8268123039953800461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,7 +92,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6302720074626973253}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SFXHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
