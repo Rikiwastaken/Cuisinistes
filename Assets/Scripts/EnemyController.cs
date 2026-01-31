@@ -115,7 +115,7 @@ public class EnemyController : MonoBehaviour
         }
         else
         {
-            agent.speed = speedwhenchill;
+            agent.speed = speedwhenchill / 2f + (speedwhenchill / 2f) * ((float)MovementController.instance.transform.GetComponent<PickUpObjects>().heldClues.Count / 4f);
             agent.isStopped = false;
             if ((Vector2.Distance(new Vector2(transform.position.x, transform.position.z), new Vector2(Destination.x, Destination.z)) < 1f || Destination == null || Destination == Vector3.zero) && staystimecounter == -1)
             {

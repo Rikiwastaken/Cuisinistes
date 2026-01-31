@@ -49,6 +49,7 @@ MonoBehaviour:
   SFXHolder: {fileID: 6302720074626973253}
   AudioMixer: {fileID: 24100000, guid: 1fed9e8d07beba74f8381dcc789c15c2, type: 2}
   SFXVol: 1
+  maxdistancetonullify: 8
   GrabSFXList:
   - objectID: 0
     GrabSFX: {fileID: 8300000, guid: 649966eba4167f4b2b1f5540393ce950, type: 3}

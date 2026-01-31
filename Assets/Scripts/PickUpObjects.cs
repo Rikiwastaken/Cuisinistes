@@ -69,7 +69,16 @@ public class PickUpObjects : MonoBehaviour
                 if (currentpickingup >= delayforpickingup)
                 {
                     heldClues.Add(closestobj.GetComponent<ThrowObjectScript>().clueID);
-                    HeldItemsText.text = "Clues picked up : " + heldClues.Count + "/5";
+                    if (heldClues.Count < 5)
+                    {
+                        HeldItemsText.text = "Clues picked up : " + heldClues.Count + "/5";
+                    }
+                    else
+                    {
+                        HeldItemsText.text = "All clues found, reach the exit !";
+                    }
+
+
                     GetComponent<UnderLineCloseObjects>().RemoveObjectFromList(closestobj);
                     Destroy(closestobj);
                 }
@@ -90,12 +99,18 @@ public class PickUpObjects : MonoBehaviour
             }
         }
 
+        if (heldClues.Count >= 5)
+        {
+            EnemyController.instance.chasing = true;
+        }
+
         ClueImage.fillAmount = (float)currentpickingup / (float)delayforpickingup;
 
         if (InteractCDCounter > 0)
         {
             InteractCDCounter--;
         }
+
 
 
     }

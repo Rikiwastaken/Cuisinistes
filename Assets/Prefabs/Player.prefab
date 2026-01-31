@@ -575,6 +575,7 @@ MonoBehaviour:
   heldClues: 
   timeforpickingupclues: 3
   ClueImage: {fileID: 5849481631824220175}
+  HeldItemsText: {fileID: 3979629040630168239}
 --- !u!1 &6965929437208380735
 GameObject:
   m_ObjectHideFlags: 0
