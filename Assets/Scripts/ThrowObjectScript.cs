@@ -9,7 +9,7 @@ public class ThrowObjectScript : MonoBehaviour
     {
         if (CDBeforeFirstSound == 100000)
         {
-            SoundManager.instance.PlaySFX(CrasHSFX, 0.25f);
+            SoundManager.instance.PlaySFX(CrasHSFX, 0.25f, transform.position);
             CDBeforeFirstSound = 0;
         }
 
@@ -22,6 +22,8 @@ public class ThrowObjectScript : MonoBehaviour
     public bool isclue;
 
     public int SFXID;
+
+    public int clueID;
 
     public AudioClip GrabSFX;
     public AudioClip CrasHSFX;
@@ -38,6 +40,7 @@ public class ThrowObjectScript : MonoBehaviour
                 CrasHSFX = SFXClass.CrashSFX;
             }
         }
+        CDBeforeFirstSound = -(int)(1 / Time.deltaTime);
     }
 
     private void Update()

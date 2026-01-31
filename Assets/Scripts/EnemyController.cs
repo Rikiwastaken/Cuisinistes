@@ -19,6 +19,7 @@ public class EnemyController : MonoBehaviour
 
     public LayerMask obstaclemask;
     public LayerMask playermask;
+    public LayerMask Pickablemask;
 
     public bool seeingplayer;
 
@@ -68,6 +69,8 @@ public class EnemyController : MonoBehaviour
             if (collision.transform.GetComponentInChildren<Rigidbody>().linearVelocity.magnitude >= 0.2f)
             {
                 stunframes = (int)(basestun / (Time.deltaTime * collision.transform.GetComponent<ThrowObjectScript>().sizemultiplier));
+                MovementController.instance.GetComponent<UnderLineCloseObjects>().RemoveObjectFromList(collision.transform.gameObject);
+                Destroy(collision.transform.gameObject);
             }
             else
             {
@@ -112,7 +115,7 @@ public class EnemyController : MonoBehaviour
         }
         else
         {
-            agent.speed = speedwhenchill;
+            agent.speed = speedwhenchill / 2f + (speedwhenchill / 2f) * ((float)MovementController.instance.transform.GetComponent<PickUpObjects>().heldClues.Count / 4f);
             agent.isStopped = false;
             if ((Vector2.Distance(new Vector2(transform.position.x, transform.position.z), new Vector2(Destination.x, Destination.z)) < 1f || Destination == null || Destination == Vector3.zero) && staystimecounter == -1)
             {
@@ -169,7 +172,6 @@ public class EnemyController : MonoBehaviour
         }
 
         GetComponentInChildren<Animator>().SetFloat("speed", agent.velocity.magnitude);
-        Debug.Log(GetComponentInChildren<Animator>().GetFloat("speed"));
     }
 
 
@@ -188,6 +190,8 @@ public class EnemyController : MonoBehaviour
             detectiondistancetouse = distancefordetection;
         }
 
+
+
         float viewangletouse = 0f;
         if (chasing)
         {
@@ -199,6 +203,11 @@ public class EnemyController : MonoBehaviour
         }
 
         ManageLightShape(detectiondistancetouse, viewangletouse);
+
+        if (MovementController.instance.iscrouching)
+        {
+            detectiondistancetouse /= 2f;
+        }
 
         // Check distance
         if (toplayer.magnitude > detectiondistancetouse)
@@ -221,7 +230,7 @@ public class EnemyController : MonoBehaviour
         }
 
         //Raycast
-        if (Physics.Raycast(transform.position + Vector3.up * eyeHeight, directionToPlayer, out RaycastHit hit, viewangletouse, obstaclemask | playermask))
+        if (Physics.Raycast(transform.position + Vector3.up * eyeHeight, directionToPlayer, out RaycastHit hit, viewangletouse, obstaclemask | playermask | Pickablemask))
         {
             if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Player"))
             {
@@ -286,6 +295,11 @@ public class EnemyController : MonoBehaviour
             detectiondistancetouse = distancefordetection;
         }
 
+        if (MovementController.instance.iscrouching)
+        {
+            detectiondistancetouse /= 2f;
+        }
+
         float viewangletouse = 0f;
         if (chasing)
         {
@@ -329,7 +343,7 @@ public class EnemyController : MonoBehaviour
             {
                 bool hitPlayer = false;
 
-                if (Physics.Raycast(eyePos, toPlayer, out RaycastHit hit, detectiondistancetouse, obstaclemask | playermask))
+                if (Physics.Raycast(eyePos, toPlayer, out RaycastHit hit, detectiondistancetouse, obstaclemask | playermask | Pickablemask))
                 {
                     hitPlayer = hit.transform.gameObject.layer == LayerMask.NameToLayer("Player");
                 }
