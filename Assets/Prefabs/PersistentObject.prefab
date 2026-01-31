@@ -69,9 +69,36 @@ MonoBehaviour:
   - objectID: 5
     GrabSFX: {fileID: 8300000, guid: da4a9ea71824389e395253f1e096136b, type: 3}
     CrashSFX: {fileID: 8300000, guid: 300beaf41681a33489af491591a2df04, type: 3}
-  - objectID: 5
+  - objectID: 6
     GrabSFX: {fileID: 8300000, guid: 18b74ab24c82f9c2ba1d390c21571023, type: 3}
     CrashSFX: {fileID: 8300000, guid: 9af7ac18b52bea270ac1504c7346149f, type: 3}
+  - objectID: 7
+    GrabSFX: {fileID: 8300000, guid: 7ea079518cab4e343aca69e8c97693be, type: 3}
+    CrashSFX: {fileID: 8300000, guid: c3e9dd4804233cb4eb04c898c2e0ea53, type: 3}
+  - objectID: 8
+    GrabSFX: {fileID: 8300000, guid: 59d3c34248ddc74418d8285005d586fd, type: 3}
+    CrashSFX: {fileID: 8300000, guid: fc0d2b0479101744b8ebdc7064730f09, type: 3}
+  - objectID: 9
+    GrabSFX: {fileID: 8300000, guid: 33ce500907c43514c95132aba520c08f, type: 3}
+    CrashSFX: {fileID: 8300000, guid: acd7571ca35c6a64a974014214ab4625, type: 3}
+  - objectID: 10
+    GrabSFX: {fileID: 8300000, guid: bea4d431afe821643beec5dd63a185d9, type: 3}
+    CrashSFX: {fileID: 8300000, guid: a70a3d6ae9341f04caf01465f87043de, type: 3}
+  - objectID: 11
+    GrabSFX: {fileID: 8300000, guid: 1c176d93febf3834c96d42381d02292e, type: 3}
+    CrashSFX: {fileID: 8300000, guid: 5be6766f290c48042b7bf9acdb50e521, type: 3}
+  - objectID: 12
+    GrabSFX: {fileID: 8300000, guid: bdb4907f6a66bef438ec2c705f616d51, type: 3}
+    CrashSFX: {fileID: 8300000, guid: 610ba90d56087ee4ab58d2e072ed321b, type: 3}
+  - objectID: 13
+    GrabSFX: {fileID: 8300000, guid: 338dbb7aca6cb834e9b7e32f1548abff, type: 3}
+    CrashSFX: {fileID: 8300000, guid: c962f0d30c1612b49a541086a3856a3f, type: 3}
+  - objectID: 14
+    GrabSFX: {fileID: 8300000, guid: fcbca593e7f316b41a562dc8e89b5466, type: 3}
+    CrashSFX: {fileID: 8300000, guid: ad724696c715cae4591469a583f2c7ba, type: 3}
+  - objectID: 15
+    GrabSFX: {fileID: 8300000, guid: 0e793c2f9c4344c43bf50d3ff1ba4f0b, type: 3}
+    CrashSFX: {fileID: 8300000, guid: 05c0bfcec5f15f54caadc4834b343426, type: 3}
 --- !u!114 &8268123039953800461
 MonoBehaviour:
   m_ObjectHideFlags: 0

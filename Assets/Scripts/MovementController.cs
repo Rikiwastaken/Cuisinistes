@@ -188,7 +188,11 @@ public class MovementController : MonoBehaviour
         {
             if (checkifenemyislit())
             {
-                EnemyController.instance.seeingplayer = true;
+                if (EnemyController.instance != null)
+                {
+                    EnemyController.instance.seeingplayer = true;
+                }
+
             }
         }
 
