@@ -18,8 +18,8 @@ TagManager:
   - Obstacle
   - Enemy
   - HUD
-  - 
-  - 
+  - MiniMapLight
+  - MiniMapSFX
   - 
   - 
   - 
