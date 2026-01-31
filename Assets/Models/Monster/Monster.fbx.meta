@@ -13,7 +13,7 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
-    optimizeGameObjects: 0
+    optimizeGameObjects: 1
     removeConstantScaleCurves: 0
     motionNodeName: 
     animationImportErrors: 
@@ -147,14 +147,6 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: ORG-spine.005
-      humanName: Neck
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
     - boneName: ORG-shoulder.L
       humanName: LeftShoulder
       limit:
@@ -235,7 +227,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: ORG-spine.006
+    - boneName: MCH-ROT-neck
       humanName: Head
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -1241,9 +1233,9 @@ ModelImporter:
       scale: {x: 1, y: 0.99999994, z: 0.99999994}
     - name: head
       parentName: MCH-ROT-head
-      position: {x: -0, y: -2.9802322e-10, z: 0}
-      rotation: {x: 0.00000013767875, y: 0.7071069, z: 0.7071067, w: 0.0000001376788}
-      scale: {x: 1, y: 1, z: 1}
+      position: {x: 0.000000003892928, y: -0.0000000029243528, z: 0.0000000023841857}
+      rotation: {x: 0.00000016971512, y: 0.71482205, z: 0.69930637, w: 0.000000104881316}
+      scale: {x: 1, y: 0.9999999, z: 0.9999999}
     - name: head_end
       parentName: head
       position: {x: -0, y: 0.0043996144, z: 0}
@@ -1252,18 +1244,18 @@ ModelImporter:
     - name: MCH-STR-neck
       parentName: neck
       position: {x: -1.5455504e-12, y: 4.8956467e-10, z: 7.994716e-13}
-      rotation: {x: -0.000000055879358, y: -2.3203661e-14, z: -5.329071e-15, w: 1}
-      scale: {x: 1, y: 0.99999994, z: 1}
+      rotation: {x: -0.0000008083878, y: -6.49481e-14, z: 0.0000009589331, w: 1}
+      scale: {x: 0.9999995, y: 1.0000007, z: 0.9999995}
     - name: MCH-spine.005
       parentName: MCH-STR-neck
-      position: {x: -2.2360521e-11, y: 0.0008257257, z: 0.00012012257}
-      rotation: {x: -0.00000008568168, y: 0.00000008287561, z: -0.000000009176391, w: 1}
-      scale: {x: 1, y: 1, z: 1}
+      position: {x: -5.893066e-12, y: 0.0008257298, z: 0.000120121826}
+      rotation: {x: 0.005485478, y: 0.000000007339323, z: -0.00000001134283, w: 0.999985}
+      scale: {x: 1.0000005, y: 0.99999934, z: 1.0000005}
     - name: tweak_spine.005
       parentName: MCH-spine.005
-      position: {x: -0, y: 0.0000000011455268, z: -8.614734e-11}
-      rotation: {x: -0.049695607, y: -0.00000011906196, z: 0.000000013428007, w: 0.9987644}
-      scale: {x: 1, y: 1, z: 1}
+      position: {x: -6.4365358e-12, y: 4.387747e-11, z: 1.08797006e-10}
+      rotation: {x: -0.049695615, y: -0.00000011906198, z: 0.000000013427975, w: 0.9987644}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
     - name: tweak_spine.005_end
       parentName: tweak_spine.005
       position: {x: -0, y: 0.0006050347, z: 0}
@@ -1292,18 +1284,18 @@ ModelImporter:
     - name: ORG-spine.004
       parentName: spine_fk.003
       position: {x: -2.8390489e-12, y: 0.0024444198, z: 2.4393078e-11}
-      rotation: {x: 0.19283623, y: -0.000000024708127, z: 0.0000000052552735, w: 0.981231}
-      scale: {x: 1, y: 0.9999999, z: 0.9999999}
+      rotation: {x: 0.19283509, y: -0.00000020550229, z: 0.00000092520867, w: 0.9812312}
+      scale: {x: 0.9999989, y: 1.000002, z: 0.99999887}
     - name: ORG-spine.005
       parentName: ORG-spine.004
-      position: {x: -8.094646e-12, y: 0.00083441916, z: 2.9062242e-10}
-      rotation: {x: -0.12164507, y: -0.00000002530044, z: -0.000000015266624, w: 0.9925737}
-      scale: {x: 1, y: 1, z: 1}
+      position: {x: 1.7093571e-11, y: 0.0008344182, z: -7.245204e-10}
+      rotation: {x: -0.12164454, y: 0.00000003686383, z: 0.000000029757299, w: 0.99257374}
+      scale: {x: 0.9999983, y: 0.9999978, z: 1.0000037}
     - name: ORG-spine.006
       parentName: ORG-spine.005
-      position: {x: 2.3680453e-11, y: 0.0012100702, z: -8.9851966e-11}
-      rotation: {x: -0.05848339, y: -0.000000075446586, z: 0.000000026063955, w: 0.9982884}
-      scale: {x: 1, y: 0.9999999, z: 0.9999999}
+      position: {x: 4.743885e-12, y: 0.0012100693, z: 1.3331222e-10}
+      rotation: {x: -0.047527015, y: 0.00000014030343, z: -0.00000093025375, w: 0.99886996}
+      scale: {x: 1.0000029, y: 0.99999994, z: 0.99999696}
     - name: ORG-spine.006_end
       parentName: ORG-spine.006
       position: {x: -0, y: 0.0043996144, z: 0}
@@ -2087,18 +2079,18 @@ ModelImporter:
     - name: DEF-spine.004
       parentName: DEF-spine.003
       position: {x: 9.509082e-12, y: 0.0024444198, z: 4.1297507e-11}
-      rotation: {x: 0.19283624, y: -0.000000021601364, z: 7.618398e-10, w: 0.981231}
-      scale: {x: 1, y: 0.9999999, z: 0.9999999}
+      rotation: {x: 0.1928351, y: -0.00000020239554, z: 0.00000092071525, w: 0.9812312}
+      scale: {x: 0.9999989, y: 1.000002, z: 0.99999887}
     - name: DEF-spine.005
       parentName: DEF-spine.004
-      position: {x: -8.094646e-12, y: 0.00083441916, z: 2.9062242e-10}
-      rotation: {x: -0.12164507, y: -0.00000002530044, z: -0.000000015266624, w: 0.9925737}
-      scale: {x: 1, y: 1, z: 1}
+      position: {x: 1.7093589e-11, y: 0.0008344182, z: -7.082222e-10}
+      rotation: {x: -0.12164454, y: 0.00000003686383, z: 0.000000029757299, w: 0.99257374}
+      scale: {x: 0.9999983, y: 0.9999978, z: 1.0000037}
     - name: DEF-spine.006
       parentName: DEF-spine.005
-      position: {x: 2.3680448e-11, y: 0.0012100702, z: -1.08478414e-10}
-      rotation: {x: -0.05848339, y: -0.000000075446586, z: 0.000000026063955, w: 0.9982884}
-      scale: {x: 1, y: 0.9999999, z: 0.9999999}
+      position: {x: 4.743885e-12, y: 0.0012100693, z: -1.5699388e-11}
+      rotation: {x: -0.047527015, y: 0.00000014030343, z: -0.00000093025375, w: 0.99886996}
+      scale: {x: 1.0000029, y: 0.99999994, z: 0.99999696}
     - name: DEF-spine.006_end
       parentName: DEF-spine.006
       position: {x: -0, y: 0.0043996144, z: 0}
@@ -2169,7 +2161,7 @@ ModelImporter:
       position: {x: -0, y: 0, z: 0}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
       scale: {x: 100, y: 100, z: 100}
-    - name: torso
+    - name: torsoooo
       parentName: Monster(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
