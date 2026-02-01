@@ -19,7 +19,6 @@ public class OptionsMenu : MonoBehaviour
 
     public void Increasevol(int ID)
     {
-        Debug.Log(ID);
         DataScript Datascript = DataScript.instance;
         if (ID == 0)
         {
