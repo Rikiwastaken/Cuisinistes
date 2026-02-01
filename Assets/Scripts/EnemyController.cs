@@ -62,6 +62,8 @@ public class EnemyController : MonoBehaviour
     public bool debug;
     public float pushforce;
 
+    public Vector3 Startpos;
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.transform.CompareTag("CanBeTaken") && collision.transform.GetComponent<ThrowObjectScript>())
@@ -90,6 +92,11 @@ public class EnemyController : MonoBehaviour
     void Awake()
     {
         instance = this;
+    }
+
+    private void Start()
+    {
+        Startpos = transform.position;
     }
 
     // Update is called once per frame

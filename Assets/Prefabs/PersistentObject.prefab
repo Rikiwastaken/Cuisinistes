@@ -146,7 +146,7 @@ MonoBehaviour:
   PlayerSFXvolMult: 0.3
   MusicChill: {fileID: 3303061516325064282}
   MusicChase: {fileID: 3578660022792746034}
-  musicvolume: 0
+  musicvolume: 0.6
 --- !u!114 &8268123039953800461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,6 +159,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2428e91819211d4e9a242914323622c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  finished: 0
+  cluelist: []
+  currentPerpID: 0
 --- !u!1 &4898903481705421035
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,7 +236,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 2707795107422618799, guid: 1fed9e8d07beba74f8381dcc789c15c2, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: ca821005147ff444599856d50a7b3de3, type: 3}
+  m_Resource: {fileID: 8300000, guid: 0ea0bd4867c31d246b2b2df1dec4afe8, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -362,7 +365,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 2707795107422618799, guid: 1fed9e8d07beba74f8381dcc789c15c2, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 161a0e86ea136a940a249624c6949a4d, type: 3}
+  m_Resource: {fileID: 8300000, guid: 26570ffe5b184f34d876de831992562f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0
   m_Pitch: 1

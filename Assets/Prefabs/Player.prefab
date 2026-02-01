@@ -795,6 +795,7 @@ MonoBehaviour:
   timeforpickingupclues: 3
   ClueImage: {fileID: 5849481631824220175}
   HeldItemsText: {fileID: 3979629040630168239}
+  AudioClipForPickingUpClues: {fileID: 8300000, guid: e454f819f34cfc145ab1487adf8e62c3, type: 3}
 --- !u!1 &6965929437208380735
 GameObject:
   m_ObjectHideFlags: 0
