@@ -4,10 +4,12 @@ using UnityEngine.SceneManagement;
 public class MainMenuScript : MonoBehaviour
 {
 
+    public AudioSource UISound;
     public void Start()
     {
         Application.targetFrameRate = 60;
         Cursor.lockState = CursorLockMode.None;
+        DontDestroyOnLoad(UISound.gameObject);
     }
 
 
