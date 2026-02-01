@@ -32,7 +32,7 @@ public class PickUpObjects : MonoBehaviour
     private int currentpickingup;
     public UnityEngine.UI.Image ClueImage;
     public TextMeshProUGUI HeldItemsText;
-
+    public AudioClip AudioClipForPickingUpClues;
     private int delayforpickingup;
 
     private InputAction clickInput;
@@ -68,6 +68,7 @@ public class PickUpObjects : MonoBehaviour
 
                 if (currentpickingup >= delayforpickingup)
                 {
+                    SoundManager.instance.PlaySFX(AudioClipForPickingUpClues, 0f, transform);
                     heldClues.Add(closestobj.GetComponent<ThrowObjectScript>().clueID);
                     if (heldClues.Count < 5)
                     {
@@ -161,7 +162,7 @@ public class PickUpObjects : MonoBehaviour
     }
     public void PickUpObject(GameObject obj)
     {
-        SoundManager.PlaySFX(obj.GetComponent<ThrowObjectScript>().GrabSFX, 0.05f, transform.position);
+        SoundManager.PlaySFX(obj.GetComponent<ThrowObjectScript>().GrabSFX, 0.05f, obj.transform);
 
         CurrentObjectPickedUp = obj;
         CurrentObjectPickedUp.transform.parent = ObjectHolder;
@@ -175,7 +176,7 @@ public class PickUpObjects : MonoBehaviour
     {
         if (CurrentObjectPickedUp != null)
         {
-            SoundManager.PlaySFX(throwObjectSFX, 0.05f, transform.position);
+            SoundManager.PlaySFX(throwObjectSFX, 0.05f, CurrentObjectPickedUp.transform);
             Rigidbody RB = CurrentObjectPickedUp.GetComponentInChildren<Rigidbody>();
             RB.isKinematic = false;
             CurrentObjectPickedUp.transform.parent = null;

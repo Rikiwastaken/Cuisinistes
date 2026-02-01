@@ -9,13 +9,12 @@ public class ThrowObjectScript : MonoBehaviour
     {
         if (CDBeforeFirstSound == 100000)
         {
-            SoundManager.instance.PlaySFX(CrasHSFX, 0.25f, transform.position);
+            SoundManager.instance.PlaySFX(CrasHSFX, 0.25f, collision.transform);
             CDBeforeFirstSound = 0;
         }
-
     }
 
-    public List<int> clueOwnerIndex; // 0 : policier, 1 : drogué, 2 : infirmière, 3 : paysan, 4 : cambrioleur
+    public List<int> clueOwnerIndex; // 0 : policier, 1 : droguï¿½, 2 : infirmiï¿½re, 3 : paysan, 4 : cambrioleur
 
     public float sizemultiplier;
 
