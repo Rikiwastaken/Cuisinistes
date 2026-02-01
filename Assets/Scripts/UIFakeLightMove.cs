@@ -24,51 +24,55 @@ public class UIFakeLightMove : MonoBehaviour
 
     [Header("Delays")]
     public float imageHoldTime = 0.4f;
-    public float loopDelay = 3f;          
-
-    bool reached = false;
+    public float loopDelay = 3f;
 
     Image lightImage;
     Vector2 lightStartPos;
     Color lightStartColor;
 
-    void Start()
+    Coroutine mainLoopCoroutine;
+
+    void Awake()
     {
         lightImage = lightCircle.GetComponent<Image>();
-
         lightStartPos = lightCircle.anchoredPosition;
         lightStartColor = lightImage.color;
+    }
 
+    void OnEnable()
+    {
         ResetState();
-        StartCoroutine(MainLoop());
+        mainLoopCoroutine = StartCoroutine(MainLoop());
+    }
+
+    void OnDisable()
+    {
+        if (mainLoopCoroutine != null)
+            StopCoroutine(mainLoopCoroutine);
     }
 
     IEnumerator MainLoop()
     {
         while (true)
         {
-            reached = false;
-
-            while (!reached)
+            while (Vector2.Distance(lightCircle.anchoredPosition, stopPoint.anchoredPosition) > 1f)
             {
                 lightCircle.anchoredPosition = Vector2.MoveTowards(
                     lightCircle.anchoredPosition,
                     stopPoint.anchoredPosition,
-                    speed * Time.deltaTime
+                    speed * Time.unscaledDeltaTime
                 );
-
-                if (Vector2.Distance(lightCircle.anchoredPosition, stopPoint.anchoredPosition) < 1f)
-                    reached = true;
-
                 yield return null;
             }
 
-            yield return StartCoroutine(FadeInImage());
-            yield return StartCoroutine(ShakeLight());
-            yield return StartCoroutine(FadeOutLight());
-            yield return new WaitForSeconds(imageHoldTime);
-            yield return StartCoroutine(FadeOutImage());
-            yield return new WaitForSeconds(loopDelay);
+            yield return FadeInImage();
+            yield return ShakeLight();
+            yield return FadeOutLight();
+
+            yield return new WaitForSecondsRealtime(imageHoldTime);
+            yield return FadeOutImage();
+
+            yield return new WaitForSecondsRealtime(loopDelay);
 
             ResetState();
         }
@@ -91,14 +95,11 @@ public class UIFakeLightMove : MonoBehaviour
 
         while (t < imageFadeInDuration)
         {
-            t += Time.deltaTime;
+            t += Time.unscaledDeltaTime;
             c.a = Mathf.Lerp(0f, 1f, t / imageFadeInDuration);
             targetImage.color = c;
             yield return null;
         }
-
-        c.a = 1f;
-        targetImage.color = c;
     }
 
     IEnumerator FadeOutImage()
@@ -108,14 +109,11 @@ public class UIFakeLightMove : MonoBehaviour
 
         while (t < imageFadeOutDuration)
         {
-            t += Time.deltaTime;
+            t += Time.unscaledDeltaTime;
             c.a = Mathf.Lerp(1f, 0f, t / imageFadeOutDuration);
             targetImage.color = c;
             yield return null;
         }
-
-        c.a = 0f;
-        targetImage.color = c;
     }
 
     IEnumerator ShakeLight()
@@ -125,9 +123,8 @@ public class UIFakeLightMove : MonoBehaviour
 
         while (elapsed < shakeDuration)
         {
-            elapsed += Time.deltaTime;
-            Vector2 offset = Random.insideUnitCircle * shakeStrength;
-            lightCircle.anchoredPosition = basePos + offset;
+            elapsed += Time.unscaledDeltaTime;
+            lightCircle.anchoredPosition = basePos + Random.insideUnitCircle * shakeStrength;
             yield return null;
         }
 
@@ -141,13 +138,10 @@ public class UIFakeLightMove : MonoBehaviour
 
         while (t < lightFadeOutDuration)
         {
-            t += Time.deltaTime;
+            t += Time.unscaledDeltaTime;
             c.a = Mathf.Lerp(lightStartColor.a, 0f, t / lightFadeOutDuration);
             lightImage.color = c;
             yield return null;
         }
-
-        c.a = 0f;
-        lightImage.color = c;
     }
 }
