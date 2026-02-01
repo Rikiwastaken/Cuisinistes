@@ -211,7 +211,7 @@ public class EnemyController : MonoBehaviour
 
         ManageLightShape(detectiondistancetouse, viewangletouse);
 
-        if (MovementController.instance.iscrouching)
+        if (MovementController.instance.iscrouching && !chasing)
         {
             detectiondistancetouse /= 2f;
         }

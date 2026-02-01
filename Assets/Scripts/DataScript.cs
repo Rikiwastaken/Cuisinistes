@@ -5,12 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class DataScript : MonoBehaviour
 {
-
-    public bool finished;
-
     public List<GameObject> cluelist;
 
     public int currentPerpID;
+
+    public List<int> cluesFound;
+
+    public static DataScript instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -40,11 +46,12 @@ public class DataScript : MonoBehaviour
 
         if (endCheck != null && endCheck.playerinside && PUObj != null && PUObj.heldClues.Count >= 5)
         {
-            finished = true;
-        }
-        else
-        {
-            finished = false;
+            cluesFound = new List<int>();
+            foreach (int clue in PUObj.heldClues)
+            {
+                cluesFound.Add(clue);
+            }
+            SceneManager.LoadScene("FinalScene");
         }
     }
 
