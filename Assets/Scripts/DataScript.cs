@@ -90,6 +90,8 @@ public class DataScript : MonoBehaviour
             MovementController.instance.transform.position = MovementController.instance.StartPos;
             MovementController.instance.justtookdamage = true;
             EnemyController.instance.transform.position = EnemyController.instance.Startpos;
+            EnemyController.instance.chasing = false;
+            EnemyController.instance.seeingplayer = false;
             remainingHP--;
 
         }
