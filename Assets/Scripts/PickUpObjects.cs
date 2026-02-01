@@ -61,7 +61,7 @@ public class PickUpObjects : MonoBehaviour
 
         if (clickInput.ReadValue<float>() == 1f)
         {
-            GameObject closestobj = FindCloset();
+            GameObject closestobj = FindClosetKey();
             if (closestobj != null && closestobj.GetComponent<ThrowObjectScript>() != null && closestobj.GetComponent<ThrowObjectScript>().isclue)
             {
                 currentpickingup++;
@@ -125,6 +125,22 @@ public class PickUpObjects : MonoBehaviour
         {
             float distance = Vector3.Distance(obj.transform.position, transform.position);
             if (distance <= mindist)
+            {
+                closestobj = obj;
+                mindist = distance;
+            }
+        }
+        return closestobj;
+    }
+
+    public GameObject FindClosetKey()
+    {
+        float mindist = GetComponent<UnderLineCloseObjects>().minimaldistance;
+        GameObject closestobj = null;
+        foreach (GameObject obj in GetComponent<UnderLineCloseObjects>().objectspickable)
+        {
+            float distance = Vector3.Distance(obj.transform.position, transform.position);
+            if (distance <= mindist && obj.GetComponent<ThrowObjectScript>() != null && obj.GetComponent<ThrowObjectScript>().isclue)
             {
                 closestobj = obj;
                 mindist = distance;

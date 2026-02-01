@@ -38,6 +38,8 @@ public class SoundManager : MonoBehaviour
 
     public AudioSource MusicChill;
     public AudioSource MusicChase;
+    public AudioSource MusicChillIntro;
+    public AudioSource MusicChaseIntro;
 
     public float musicvolume;
 
@@ -102,10 +104,12 @@ public class SoundManager : MonoBehaviour
             if (!MusicChill.isPlaying)
             {
                 Debug.Log("Here");
-                MusicChill.Play();
-                MusicChase.Play();
+                PlayMusicWithIntro(MusicChill, MusicChillIntro);
+                PlayMusicWithIntro(MusicChase, MusicChaseIntro);
                 MusicChase.volume = 0;
+                MusicChaseIntro.volume = 0;
                 MusicChill.volume = musicvolume;
+                MusicChillIntro.volume = musicvolume;
             }
 
             bool chasing = EnemyController.instance.chasing;
@@ -114,10 +118,12 @@ public class SoundManager : MonoBehaviour
                 if (MusicChase.volume < musicvolume)
                 {
                     MusicChase.volume += Time.deltaTime;
+                    MusicChaseIntro.volume += Time.deltaTime;
                 }
                 if (MusicChill.volume > 0)
                 {
                     MusicChill.volume -= Time.deltaTime;
+                    MusicChillIntro.volume -= Time.deltaTime;
                 }
             }
             else
@@ -125,20 +131,43 @@ public class SoundManager : MonoBehaviour
                 if (MusicChill.volume < musicvolume)
                 {
                     MusicChill.volume += Time.deltaTime;
+                    MusicChillIntro.volume += Time.deltaTime;
                 }
                 if (MusicChase.volume > 0)
                 {
                     MusicChase.volume -= Time.deltaTime;
+                    MusicChaseIntro.volume -= Time.deltaTime;
                 }
             }
         }
         else
         {
-            Debug.Log("There");
             MusicChill.Stop();
+            MusicChillIntro.Stop();
             MusicChase.Stop();
-            MusicChase.volume = 0;
-            MusicChill.volume = musicvolume;
+            MusicChaseIntro.Stop();
+        }
+
+
+    }
+
+    private void PlayMusicWithIntro(AudioSource Main, AudioSource intro)
+    {
+        Main.volume = musicvolume;
+        if (intro.clip == null)
+        {
+            Main.PlayScheduled(AudioSettings.dspTime);
+        }
+        else
+        {
+            intro.volume = musicvolume;
+
+            intro.PlayScheduled(AudioSettings.dspTime);
+
+            double introduration = (double)intro.clip.samples / intro.clip.frequency;
+
+
+            Main.PlayScheduled(AudioSettings.dspTime + introduration);
         }
 
 
