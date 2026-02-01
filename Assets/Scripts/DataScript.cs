@@ -14,6 +14,7 @@ public class DataScript : MonoBehaviour
         public float Mastervol;
         public float MusicVol;
         public float SFXVol;
+        public float sensibility;
     }
 
     public OptionsClass Options;
@@ -86,7 +87,14 @@ public class DataScript : MonoBehaviour
             SceneManager.LoadScene("FinalScene");
         }
 
-
+        if (Options.sensibility == 0)
+        {
+            Options = new OptionsClass();
+            Options.MusicVol = 1.000001f;
+            Options.SFXVol = 1.000001f;
+            Options.Mastervol = 1.000001f;
+            Options.sensibility = 0.000001f;
+        }
 
     }
 
@@ -115,6 +123,7 @@ public class DataScript : MonoBehaviour
             Options.MusicVol = 1.000001f;
             Options.SFXVol = 1.000001f;
             Options.Mastervol = 1.000001f;
+            Options.sensibility = 1.000001f;
         }
         SoundManager.instance.ChangeVolume();
     }

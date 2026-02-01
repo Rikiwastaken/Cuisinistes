@@ -31,8 +31,8 @@ public class CameraController : MonoBehaviour
     {
         Vector2 mouseDelta = LookAction.ReadValue<Vector2>();
 
-        float mouseX = mouseDelta.x * sensitivityX * Time.deltaTime;
-        float mouseY = mouseDelta.y * sensitivityY * Time.deltaTime;
+        float mouseX = mouseDelta.x * sensitivityX * Time.deltaTime * DataScript.instance.Options.sensibility;
+        float mouseY = mouseDelta.y * sensitivityY * Time.deltaTime * DataScript.instance.Options.sensibility;
 
 
         rotationX -= mouseY;

@@ -7,6 +7,7 @@ public class OptionsMenu : MonoBehaviour
     public Image SFXBar;
     public Image MusicBar;
     public Image MasterBar;
+    public Image SensitivityBar;
 
 
     private void Start()
@@ -15,6 +16,31 @@ public class OptionsMenu : MonoBehaviour
         SFXBar.fillAmount = Datascript.Options.SFXVol / 2f;
         MusicBar.fillAmount = Datascript.Options.MusicVol / 2f;
         MasterBar.fillAmount = Datascript.Options.Mastervol / 2f;
+        SensitivityBar.fillAmount = Datascript.Options.sensibility / 2f;
+    }
+
+    public void IncreaseSensibility()
+    {
+        DataScript Datascript = DataScript.instance;
+        Datascript.Options.sensibility += 0.1f;
+        if (Datascript.Options.sensibility > 2)
+        {
+            Datascript.Options.sensibility = 2f;
+        }
+        SensitivityBar.fillAmount = Datascript.Options.sensibility / 2f;
+        Datascript.SaveOptions();
+    }
+
+    public void DecreaseSensibility()
+    {
+        DataScript Datascript = DataScript.instance;
+        Datascript.Options.sensibility -= 0.1f;
+        if (Datascript.Options.sensibility < 0)
+        {
+            Datascript.Options.sensibility = 0f;
+        }
+        SensitivityBar.fillAmount = Datascript.Options.sensibility / 2f;
+        Datascript.SaveOptions();
     }
 
     public void Increasevol(int ID)
