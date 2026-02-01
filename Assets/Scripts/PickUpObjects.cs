@@ -209,7 +209,7 @@ public class PickUpObjects : MonoBehaviour
             {
                 direction = cam.transform.forward;
             }
-
+            RB.isKinematic = false;
             RB.AddForce(direction * throwforce * CurrentObjectPickedUp.GetComponent<ThrowObjectScript>().sizemultiplier, ForceMode.Impulse);
             CurrentObjectPickedUp = null;
         }

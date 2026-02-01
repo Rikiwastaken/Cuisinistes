@@ -413,6 +413,7 @@ GameObject:
   - component: {fileID: 1423490753856821101}
   - component: {fileID: 4361020652924776066}
   - component: {fileID: 210498859533001623}
+  - component: {fileID: 375227081950540296}
   - component: {fileID: 2424790202694058361}
   - component: {fileID: 7908284720829870109}
   m_Layer: 8
@@ -542,6 +543,23 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &375227081950540296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5561733711508064971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.Volume
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 0
+  sharedProfile: {fileID: 11400000, guid: 8a270a70e9380a34a83ab05ce6c976fb, type: 2}
 --- !u!114 &2424790202694058361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -751,6 +769,8 @@ MonoBehaviour:
   CamElevationWhenUp: 2
   timetoCrouch: 0.15
   speedwhencrouching: 1
+  justtookdamage: 0
+  CameraHitVolume: {fileID: 375227081950540296}
   StartPos: {x: 0, y: 0, z: 0}
 --- !u!114 &9190491551218582027
 MonoBehaviour:

@@ -13,14 +13,22 @@ public class IndividualSoundScript : MonoBehaviour
 
     private Vector3 previousposEmiterPos;
 
+    private Vector3 playerpos;
+
     // Update is called once per frame
     void Update()
     {
+
+        if (PlayerTransform != null)
+        {
+            playerpos = PlayerTransform.position;
+        }
+
         float volume = 0;
 
         if (Emiter != null)
         {
-            float distance = Vector3.Distance(PlayerTransform.position, Emiter.position);
+            float distance = Vector3.Distance(playerpos, Emiter.position);
 
 
             if (distance < maxdistancetonullify)
@@ -30,7 +38,7 @@ public class IndividualSoundScript : MonoBehaviour
         }
         else
         {
-            float distance = Vector3.Distance(PlayerTransform.position, previousposEmiterPos);
+            float distance = Vector3.Distance(playerpos, previousposEmiterPos);
 
 
             if (distance < maxdistancetonullify)

@@ -13,6 +13,11 @@ public class DataScript : MonoBehaviour
 
     public static DataScript instance;
 
+    private int GameOverCD;
+
+    public int remainingHP;
+
+
     private void Awake()
     {
         instance = this;
@@ -33,6 +38,18 @@ public class DataScript : MonoBehaviour
 
     private void Update()
     {
+        if (GameOverCD > 0)
+        {
+            GameOverCD++;
+            Debug.Log(GameOverCD);
+            if (GameOverCD > 5f / Time.deltaTime)
+            {
+                SceneManager.LoadScene("MainMenu");
+                GameOverCD = 0;
+            }
+
+        }
+
         EndCheck endCheck = EndCheck.instance;
 
         MovementController MvtController = MovementController.instance;
@@ -53,6 +70,9 @@ public class DataScript : MonoBehaviour
             }
             SceneManager.LoadScene("FinalScene");
         }
+
+
+
     }
 
     void SceneChange(Scene arg0, Scene arg1)
@@ -61,6 +81,24 @@ public class DataScript : MonoBehaviour
         {
             InitializeClues();
         }
+    }
+
+    public void TakeDamage()
+    {
+        if (remainingHP > 0)
+        {
+            MovementController.instance.transform.position = MovementController.instance.StartPos;
+            MovementController.instance.justtookdamage = true;
+            EnemyController.instance.transform.position = EnemyController.instance.Startpos;
+            remainingHP--;
+
+        }
+        else
+        {
+            SceneManager.LoadScene("GameOverScene");
+            GameOverCD = 1;
+        }
+
     }
 
     void InitializeClues()

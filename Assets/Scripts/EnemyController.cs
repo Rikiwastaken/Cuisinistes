@@ -84,6 +84,10 @@ public class EnemyController : MonoBehaviour
 
         }
 
+        if (collision.transform.GetComponent<MovementController>() != null)
+        {
+            DataScript.instance.TakeDamage();
+        }
 
     }
 
