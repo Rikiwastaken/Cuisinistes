@@ -23,7 +23,9 @@ public class EndSceneScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Debug.Log(DataScript.instance.cluesFound.Count);
+
+        Cursor.lockState = CursorLockMode.None;
+
         for (int i = 0; i < DataScript.instance.cluesFound.Count; i++)
         {
             Vector3 clueposition = ClueVisuals.GetChild(i).position;
