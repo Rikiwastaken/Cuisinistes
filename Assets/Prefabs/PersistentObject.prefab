@@ -160,7 +160,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   finished: 0
-  cluelist: []
+  cluelist:
+  - {fileID: 8878567140519428722, guid: 7b13db8a3b193fb4483d1baaaa6ab376, type: 3}
+  - {fileID: 1379691480114579690, guid: 7348ed3c02a82e24b90d363d3b2455d4, type: 3}
+  - {fileID: 4020949277342013753, guid: 82d6b7f2f8b6abb4fb75c514f31a7ace, type: 3}
+  - {fileID: 6125113417948732535, guid: 49ff254294b432448841c53652324400, type: 3}
+  - {fileID: 6494886021949480126, guid: 1f22b351afcacd74890014dcc9b32a8f, type: 3}
+  - {fileID: 6259981931665726112, guid: 935d4843270de6f4a82b634091fbc042, type: 3}
+  - {fileID: 7992265094154618772, guid: 96806a83a177bbb4597d2f37287f7f96, type: 3}
+  - {fileID: 8332788080597146622, guid: 059365ecd1104874cb54f1d1441d083c, type: 3}
+  - {fileID: 984313839469806611, guid: 14fdb5ef21811ae419d951e52179f96d, type: 3}
+  - {fileID: 1424811593354920593, guid: bf91019fe10dfe44c886563b7fae84bb, type: 3}
+  - {fileID: 1889403953347040370, guid: ba43e283b35c1964fa5b788c8634334a, type: 3}
+  - {fileID: 7723066394055265027, guid: 1184c2f2374b042409adfc8ee6225bd2, type: 3}
+  - {fileID: 4629448482391977709, guid: 4c595f941d7a12b45ad38c75ac3d1899, type: 3}
+  - {fileID: 7474591540236239340, guid: 6384f23b2980d5f469356760f2e28863, type: 3}
+  - {fileID: 778615551643258402, guid: 7944a37f616f20b4b8eaed0d41c11775, type: 3}
+  - {fileID: 8012442445167210469, guid: aaa265ac80ffd4c40a8c76e844d4ebeb, type: 3}
   currentPerpID: 0
 --- !u!1 &4898903481705421035
 GameObject:

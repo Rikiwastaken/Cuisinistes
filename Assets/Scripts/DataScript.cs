@@ -105,7 +105,6 @@ public class DataScript : MonoBehaviour
         for (int i = 0; i < 5; i++)
         {
             GameObject newclue = Instantiate(relevantclues[i]);
-            newclue.transform.name = "Clue " + (i + 1);
             newclue.transform.position = cluespositions[i];
         }
 
