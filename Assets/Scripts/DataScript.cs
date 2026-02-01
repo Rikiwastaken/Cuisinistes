@@ -84,7 +84,9 @@ public class DataScript : MonoBehaviour
 
         int foundcluesposition = 0;
 
-        while (foundcluesposition < 5)
+        int safeguard = 0;
+
+        while (foundcluesposition < 5 && safeguard < 200)
         {
             int clueholderID = UnityEngine.Random.Range(0, ClueHolder.childCount);
             Vector3 newpos = ClueHolder.GetChild(clueholderID).position;
@@ -93,6 +95,11 @@ public class DataScript : MonoBehaviour
                 cluespositions.Add(newpos);
                 foundcluesposition++;
             }
+            safeguard++;
+        }
+        if (safeguard >= 200)
+        {
+            Debug.Log("loop could not end");
         }
 
         for (int i = 0; i < 5; i++)
