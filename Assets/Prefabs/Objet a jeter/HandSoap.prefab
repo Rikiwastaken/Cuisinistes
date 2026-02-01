@@ -96,9 +96,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThrowObjectScript
   clueOwnerIndex: 
-  sizemultiplier: 1
+  sizemultiplier: 2
   isclue: 0
-  SFXID: 7
+  SFXID: 16
   clueID: 0
   GrabSFX: {fileID: 0}
   CrasHSFX: {fileID: 0}

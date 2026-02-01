@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.Audio;
 
 public class SoundManager : MonoBehaviour
@@ -14,6 +15,10 @@ public class SoundManager : MonoBehaviour
     public float SFXVol;
     public float maxdistancetonullify;
 
+
+    public List<AudioClip> MonsterWalkSound;
+    public List<AudioClip> PlayerWalkSound;
+
     [Serializable]
     public class SoundEffectClass
     {
@@ -24,25 +29,90 @@ public class SoundManager : MonoBehaviour
 
     public List<SoundEffectClass> GrabSFXList;
 
+    public int stepDelay;
+    public float delaybetweenstepsmultiplier;
+
+    public int MonsterStepDelay;
+
+    public float PlayerSFXvolMult;
+
 
     private void Awake()
     {
         instance = this;
     }
 
-    public void PlaySFX(AudioClip clip, float pitchrandomness, Transform Emiter)
+    private void Update()
     {
-        StartCoroutine(PlaySFXCoroutine(clip, pitchrandomness, Emiter));
+        if (MovementController.instance != null)
+        {
+            if (MovementController.instance.GetComponent<Rigidbody>().linearVelocity.magnitude > 0.1f)
+            {
+                if (stepDelay == 0)
+                {
+
+                    int randomSFX = UnityEngine.Random.Range(0, PlayerWalkSound.Count);
+                    stepDelay = (int)(PlayerWalkSound[randomSFX].length * 60f);
+                    if (MovementController.instance.iscrouching)
+                    {
+                        stepDelay = (int)((float)stepDelay * 1.2f);
+                    }
+                    PlaySFX(PlayerWalkSound[randomSFX], 0.05f, MovementController.instance.transform, PlayerSFXvolMult);
+                }
+                else
+                {
+                    stepDelay--;
+                }
+            }
+            else
+            {
+                stepDelay = 0;
+            }
+        }
+        if (EnemyController.instance != null)
+        {
+            if (EnemyController.instance.GetComponent<NavMeshAgent>().velocity.magnitude > 0.1f)
+            {
+                if (MonsterStepDelay == 0)
+                {
+
+                    int randomSFX = UnityEngine.Random.Range(0, MonsterWalkSound.Count);
+                    MonsterStepDelay = (int)(MonsterWalkSound[randomSFX].length * 60f);
+
+                    PlaySFX(MonsterWalkSound[randomSFX], 0.05f, EnemyController.instance.transform);
+                }
+                else
+                {
+                    MonsterStepDelay--;
+                }
+            }
+            else
+            {
+                MonsterStepDelay = 0;
+            }
+        }
     }
 
-    private IEnumerator PlaySFXCoroutine(AudioClip clip, float pitchrandomness, Transform Emiter)
+    public void PlaySFX(AudioClip clip, float pitchrandomness, Transform Emiter, float volume = -1)
     {
+        StartCoroutine(PlaySFXCoroutine(clip, pitchrandomness, Emiter, volume));
+    }
+
+    private IEnumerator PlaySFXCoroutine(AudioClip clip, float pitchrandomness, Transform Emiter, float newvolume)
+    {
+
+        float vol = newvolume;
+        if (vol < 0)
+        {
+            vol = SFXVol;
+        }
+
         GameObject newAudioSource = new GameObject();
         newAudioSource.name = clip.name;
         newAudioSource.transform.parent = SFXHolder;
         newAudioSource.transform.position = Emiter.position;
         IndividualSoundScript ISS = newAudioSource.AddComponent<IndividualSoundScript>();
-        ISS.basevolume = SFXVol;
+        ISS.basevolume = vol;
         ISS.Emiter = Emiter;
         ISS.PlayerTransform = MovementController.instance.transform;
         ISS.maxdistancetonullify = maxdistancetonullify;
@@ -63,12 +133,14 @@ public class SoundManager : MonoBehaviour
             volume = (maxdistancetonullify - distance) / maxdistancetonullify;
         }
 
-        AS.volume = SFXVol * volume;
+        AS.volume = vol * volume;
         AS.pitch = 1f + UnityEngine.Random.Range(-pitchrandomness, pitchrandomness);
         AS.Play();
         yield return new WaitForSeconds(AS.clip.length);
         Destroy(newAudioSource);
     }
+
+
 
 
 }
