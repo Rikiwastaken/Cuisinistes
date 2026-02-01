@@ -197,28 +197,42 @@ public class SoundManager : MonoBehaviour
         GameObject newAudioSource = new GameObject();
         newAudioSource.name = clip.name;
         newAudioSource.transform.parent = SFXHolder;
-        newAudioSource.transform.position = Emiter.position;
+        if (Emiter == null)
+        {
+            newAudioSource.transform.localPosition = Vector3.zero;
+        }
+        else
+        {
+            newAudioSource.transform.position = Emiter.position;
+        }
+
         IndividualSoundScript ISS = newAudioSource.AddComponent<IndividualSoundScript>();
         ISS.basevolume = vol;
         ISS.Emiter = Emiter;
-        ISS.PlayerTransform = MovementController.instance.transform;
+        if (MovementController.instance != null)
+        {
+            ISS.PlayerTransform = MovementController.instance.transform;
+        }
         ISS.maxdistancetonullify = maxdistancetonullify;
         AudioSource AS = newAudioSource.AddComponent<AudioSource>();
         AS.outputAudioMixerGroup = AudioMixer.FindMatchingGroups("Sound")[0];
         AS.clip = clip;
 
-
-
-        Vector3 playerposition = MovementController.instance.transform.position;
-
-        float distance = Vector3.Distance(playerposition, Emiter.position);
-
-        float volume = 0;
-
-        if (distance < maxdistancetonullify)
+        float volume = 1;
+        if (MovementController.instance)
         {
-            volume = (maxdistancetonullify - distance) / maxdistancetonullify;
+            Vector3 playerposition = MovementController.instance.transform.position;
+
+            float distance = Vector3.Distance(playerposition, Emiter.position);
+
+            volume = 0;
+
+            if (distance < maxdistancetonullify)
+            {
+                volume = (maxdistancetonullify - distance) / maxdistancetonullify;
+            }
         }
+
 
         AS.volume = vol * volume;
         AS.pitch = 1f + UnityEngine.Random.Range(-pitchrandomness, pitchrandomness);

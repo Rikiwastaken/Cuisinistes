@@ -36,7 +36,7 @@ public class IndividualSoundScript : MonoBehaviour
                 volume = (maxdistancetonullify - distance) / maxdistancetonullify;
             }
         }
-        else
+        else if (MovementController.instance != null)
         {
             float distance = Vector3.Distance(playerpos, previousposEmiterPos);
 
@@ -45,6 +45,10 @@ public class IndividualSoundScript : MonoBehaviour
             {
                 volume = (maxdistancetonullify - distance) / maxdistancetonullify;
             }
+        }
+        else
+        {
+            volume = 1f;
         }
 
 
