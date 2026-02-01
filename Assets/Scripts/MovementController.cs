@@ -60,7 +60,7 @@ public class MovementController : MonoBehaviour
     public float speedwhencrouching;
     private InputAction CrouchAction;
 
-
+    public Vector3 StartPos;
     private void Awake()
     {
         instance = this;
@@ -75,6 +75,7 @@ public class MovementController : MonoBehaviour
         CrouchAction = InputSystem.actions.FindAction("Crouch");
         FlashLightToggle = InputSystem.actions.FindAction("FlashLight");
         baseYHand = handtransform.localPosition.y;
+        StartPos = transform.position;
     }
 
 

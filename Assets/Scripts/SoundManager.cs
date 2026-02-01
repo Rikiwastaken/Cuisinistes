@@ -101,6 +101,7 @@ public class SoundManager : MonoBehaviour
         {
             if (!MusicChill.isPlaying)
             {
+                Debug.Log("Here");
                 MusicChill.Play();
                 MusicChase.Play();
                 MusicChase.volume = 0;
@@ -133,6 +134,7 @@ public class SoundManager : MonoBehaviour
         }
         else
         {
+            Debug.Log("There");
             MusicChill.Stop();
             MusicChase.Stop();
             MusicChase.volume = 0;
