@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class SoundManager : MonoBehaviour
 {
@@ -40,6 +41,8 @@ public class SoundManager : MonoBehaviour
     public AudioSource MusicChase;
     public AudioSource MusicChillIntro;
     public AudioSource MusicChaseIntro;
+    public AudioSource Menu;
+    public AudioSource MenuIntro;
 
     public float musicvolume;
 
@@ -110,7 +113,6 @@ public class SoundManager : MonoBehaviour
         {
             if (!MusicChill.isPlaying)
             {
-                Debug.Log("Here");
                 PlayMusicWithIntro(MusicChill, MusicChillIntro);
                 PlayMusicWithIntro(MusicChase, MusicChaseIntro);
                 MusicChase.volume = 0;
@@ -155,6 +157,18 @@ public class SoundManager : MonoBehaviour
             MusicChaseIntro.Stop();
         }
 
+        if (SceneManager.GetActiveScene().name == "MainMenu")
+        {
+            if (!Menu.isPlaying)
+            {
+                PlayMusicWithIntro(Menu, MenuIntro);
+            }
+        }
+        else if (Menu.isPlaying)
+        {
+            Menu.Stop();
+            MenuIntro.Stop();
+        }
 
     }
 
