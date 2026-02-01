@@ -180,7 +180,21 @@ public class PickUpObjects : MonoBehaviour
             Rigidbody RB = CurrentObjectPickedUp.GetComponentInChildren<Rigidbody>();
             RB.isKinematic = false;
             CurrentObjectPickedUp.transform.parent = null;
-            RB.AddForce(cam.forward * throwforce * CurrentObjectPickedUp.GetComponent<ThrowObjectScript>().sizemultiplier, ForceMode.Impulse);
+
+            Vector3 direction = EnemyController.instance.transform.position - CurrentObjectPickedUp.transform.position;
+            direction = Vector3.Normalize(direction);
+
+            float angle = Vector3.Angle(cam.transform.forward, direction);
+            if (angle > 90f / 2f)
+            {
+                direction = cam.transform.forward;
+            }
+            if (Vector3.Distance(EnemyController.instance.transform.position, CurrentObjectPickedUp.transform.position) > 10)
+            {
+                direction = cam.transform.forward;
+            }
+
+            RB.AddForce(direction * throwforce * CurrentObjectPickedUp.GetComponent<ThrowObjectScript>().sizemultiplier, ForceMode.Impulse);
             CurrentObjectPickedUp = null;
         }
     }
