@@ -84,6 +84,10 @@ public class EnemyController : MonoBehaviour
 
         }
 
+        if (collision.transform.GetComponent<MovementController>() != null)
+        {
+            DataScript.instance.TakeDamage();
+        }
 
     }
 
@@ -211,7 +215,7 @@ public class EnemyController : MonoBehaviour
 
         ManageLightShape(detectiondistancetouse, viewangletouse);
 
-        if (MovementController.instance.iscrouching)
+        if (MovementController.instance.iscrouching && !chasing)
         {
             detectiondistancetouse /= 2f;
         }

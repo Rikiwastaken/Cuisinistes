@@ -99,7 +99,7 @@ MonoBehaviour:
   sizemultiplier: 0
   isclue: 1
   SFXID: 13
-  clueID: 0
+  clueID: 13
   GrabSFX: {fileID: 0}
   CrasHSFX: {fileID: 0}
 --- !u!1001 &6684380604812877999

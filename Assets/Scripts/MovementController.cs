@@ -60,6 +60,11 @@ public class MovementController : MonoBehaviour
     public float speedwhencrouching;
     private InputAction CrouchAction;
 
+    [Header("Damage")]
+    public bool justtookdamage;
+    private int damagecounter;
+    public Volume CameraHitVolume;
+
     public Vector3 StartPos;
     private void Awake()
     {
@@ -81,6 +86,26 @@ public class MovementController : MonoBehaviour
 
     void Update()
     {
+
+        if (justtookdamage)
+        {
+            if (damagecounter == 0)
+            {
+                damagecounter = 120;
+            }
+            else
+            {
+                damagecounter--;
+            }
+            float intensityfloatvalue = (float)damagecounter / 120f;
+            CameraHitVolume.weight = intensityfloatvalue;
+
+            if (damagecounter == 0)
+            {
+                justtookdamage = false;
+            }
+        }
+
 
         if (CrouchAction.ReadValue<float>() != 0)
         {

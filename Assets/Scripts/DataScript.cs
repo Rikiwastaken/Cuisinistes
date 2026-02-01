@@ -5,12 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class DataScript : MonoBehaviour
 {
-
-    public bool finished;
-
     public List<GameObject> cluelist;
 
     public int currentPerpID;
+
+    public List<int> cluesFound;
+
+    public static DataScript instance;
+
+    private int GameOverCD;
+
+    public int remainingHP;
+
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,6 +38,18 @@ public class DataScript : MonoBehaviour
 
     private void Update()
     {
+        if (GameOverCD > 0)
+        {
+            GameOverCD++;
+            Debug.Log(GameOverCD);
+            if (GameOverCD > 5f / Time.deltaTime)
+            {
+                SceneManager.LoadScene("MainMenu");
+                GameOverCD = 0;
+            }
+
+        }
+
         EndCheck endCheck = EndCheck.instance;
 
         MovementController MvtController = MovementController.instance;
@@ -40,12 +63,16 @@ public class DataScript : MonoBehaviour
 
         if (endCheck != null && endCheck.playerinside && PUObj != null && PUObj.heldClues.Count >= 5)
         {
-            finished = true;
+            cluesFound = new List<int>();
+            foreach (int clue in PUObj.heldClues)
+            {
+                cluesFound.Add(clue);
+            }
+            SceneManager.LoadScene("FinalScene");
         }
-        else
-        {
-            finished = false;
-        }
+
+
+
     }
 
     void SceneChange(Scene arg0, Scene arg1)
@@ -54,6 +81,26 @@ public class DataScript : MonoBehaviour
         {
             InitializeClues();
         }
+    }
+
+    public void TakeDamage()
+    {
+        if (remainingHP > 0)
+        {
+            MovementController.instance.transform.position = MovementController.instance.StartPos;
+            MovementController.instance.justtookdamage = true;
+            EnemyController.instance.transform.position = EnemyController.instance.Startpos;
+            EnemyController.instance.chasing = false;
+            EnemyController.instance.seeingplayer = false;
+            remainingHP--;
+
+        }
+        else
+        {
+            SceneManager.LoadScene("GameOverScene");
+            GameOverCD = 1;
+        }
+
     }
 
     void InitializeClues()

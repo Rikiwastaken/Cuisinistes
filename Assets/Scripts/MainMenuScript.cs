@@ -18,6 +18,7 @@ public class MainMenuScript : MonoBehaviour
 
     public void Play()
     {
+        DataScript.instance.remainingHP = 2;
         SceneManager.LoadScene("Mapping");
     }
 }
