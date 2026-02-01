@@ -36,6 +36,10 @@ public class SoundManager : MonoBehaviour
 
     public float PlayerSFXvolMult;
 
+    public AudioSource MusicChill;
+    public AudioSource MusicChase;
+
+    public float musicvolume;
 
     private void Awake()
     {
@@ -91,6 +95,51 @@ public class SoundManager : MonoBehaviour
                 MonsterStepDelay = 0;
             }
         }
+
+
+        if (EnemyController.instance != null)
+        {
+            if (!MusicChill.isPlaying)
+            {
+                MusicChill.Play();
+                MusicChase.Play();
+                MusicChase.volume = 0;
+                MusicChill.volume = musicvolume;
+            }
+
+            bool chasing = EnemyController.instance.chasing;
+            if (chasing)
+            {
+                if (MusicChase.volume < musicvolume)
+                {
+                    MusicChase.volume += Time.deltaTime;
+                }
+                if (MusicChill.volume > 0)
+                {
+                    MusicChill.volume -= Time.deltaTime;
+                }
+            }
+            else
+            {
+                if (MusicChill.volume < musicvolume)
+                {
+                    MusicChill.volume += Time.deltaTime;
+                }
+                if (MusicChase.volume > 0)
+                {
+                    MusicChase.volume -= Time.deltaTime;
+                }
+            }
+        }
+        else
+        {
+            MusicChill.Stop();
+            MusicChase.Stop();
+            MusicChase.volume = 0;
+            MusicChill.volume = musicvolume;
+        }
+
+
     }
 
     public void PlaySFX(AudioClip clip, float pitchrandomness, Transform Emiter, float volume = -1)
