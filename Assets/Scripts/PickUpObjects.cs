@@ -146,7 +146,7 @@ public class PickUpObjects : MonoBehaviour
         if (CurrentObjectPickedUp == null)
         {
             GameObject closestobj = FindCloset();
-            if (closestobj != null && !closestobj.GetComponent<ThrowObjectScript>().isclue)
+            if (closestobj != null && closestobj.GetComponent<ThrowObjectScript>() != null && !closestobj.GetComponent<ThrowObjectScript>().isclue)
             {
                 PickUpObject(closestobj);
             }
