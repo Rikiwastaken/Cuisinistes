@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: eeacbbc12ffd72f4db324b86c3319e9d
+=======
+guid: d06d2f7628fb75749935fcea5397ab2b
+>>>>>>> 26b1369d21cddc85ccea4eafc242ccdf90ff396d
 AudioImporter:
   externalObjects: {}
   serializedVersion: 8
@@ -11,11 +15,19 @@ AudioImporter:
     compressionFormat: 1
     quality: 1
     conversionMode: 0
+<<<<<<< HEAD
     preloadAudioData: 1
   platformSettingOverrides: {}
   forceToMono: 0
   normalize: 1
   loadInBackground: 1
+=======
+    preloadAudioData: 0
+  platformSettingOverrides: {}
+  forceToMono: 0
+  normalize: 1
+  loadInBackground: 0
+>>>>>>> 26b1369d21cddc85ccea4eafc242ccdf90ff396d
   ambisonic: 0
   3D: 1
   userData: 
