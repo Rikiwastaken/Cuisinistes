@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DataScript : MonoBehaviour
 {
@@ -6,11 +7,25 @@ public class DataScript : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(gameObject);
+
+        if (SceneManager.GetActiveScene().name == "FirstScene")
+        {
+            SceneManager.activeSceneChanged += SceneChange;
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void SceneChange(Scene arg0, Scene arg1)
     {
-
+        if (arg1.name == "Mapping")
+        {
+            InitializeClues();
+        }
     }
+
+    void InitializeClues()
+    {
+        Debug.Log("testInitializeClues");
+    }
+
 }

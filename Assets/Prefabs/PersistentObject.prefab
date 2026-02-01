@@ -49,7 +49,40 @@ MonoBehaviour:
   SFXHolder: {fileID: 6302720074626973253}
   AudioMixer: {fileID: 24100000, guid: 1fed9e8d07beba74f8381dcc789c15c2, type: 2}
   SFXVol: 1
-  maxdistancetonullify: 8
+  maxdistancetonullify: 14
+  MonsterWalkSound:
+  - {fileID: 8300000, guid: 0c188ced29c1b734db27007e72578c77, type: 3}
+  - {fileID: 8300000, guid: c7c2c4b48a3f6624795bd11a6c2e5954, type: 3}
+  - {fileID: 8300000, guid: 760ee0ec4ac561d41aee377109e6caff, type: 3}
+  - {fileID: 8300000, guid: 3fb53974490c86f46b1ef2cb78f68155, type: 3}
+  - {fileID: 8300000, guid: 8c3fbc0dafadef14ca12adf6c6b5c88e, type: 3}
+  - {fileID: 8300000, guid: f1254666a73885a47ab8e56787dc786e, type: 3}
+  - {fileID: 8300000, guid: 5e302cbe6c4d7e046b59e9d3bbd587bc, type: 3}
+  - {fileID: 8300000, guid: 496aa66e868be2c41ad61fc5f0d65bbc, type: 3}
+  - {fileID: 8300000, guid: dc6112a1061b7a248b3a39b1222cf87c, type: 3}
+  - {fileID: 8300000, guid: 715caa6907d2f904799476164e71a27b, type: 3}
+  PlayerWalkSound:
+  - {fileID: 8300000, guid: e3b3a41ba0da8f949a9d158eb0534a53, type: 3}
+  - {fileID: 8300000, guid: 709b8045fdbea03429e417d30385210c, type: 3}
+  - {fileID: 8300000, guid: 7d19ffadbd5569a40bbc510e17db2c1b, type: 3}
+  - {fileID: 8300000, guid: 2c53a6cd0a81c8841980610d12032c40, type: 3}
+  - {fileID: 8300000, guid: 9f055afa1ab5d7c439dbf2baa8a80aec, type: 3}
+  - {fileID: 8300000, guid: 46eb98fef1a8c52448c41c4b6c520010, type: 3}
+  - {fileID: 8300000, guid: dc808b6a73500d64c91df78d27038d2c, type: 3}
+  - {fileID: 8300000, guid: fe3ffe6f34dcc9443b1644f174321613, type: 3}
+  - {fileID: 8300000, guid: c77662eee38936a40a174c3936bf5fa6, type: 3}
+  - {fileID: 8300000, guid: 5b771db24595a8644a7a2e763d076bc1, type: 3}
+  - {fileID: 8300000, guid: b05d1fb5f83abd348a6a86b0cb5fd7c0, type: 3}
+  - {fileID: 8300000, guid: 29f1cc857b5da124c8296c4cd11e9702, type: 3}
+  - {fileID: 8300000, guid: ec10bbb31bb323d4eb61427f1f073019, type: 3}
+  - {fileID: 8300000, guid: 4b6a8da50c28c23478475039f6578eb5, type: 3}
+  - {fileID: 8300000, guid: 9d66397c1308eed40bb618be62713b94, type: 3}
+  - {fileID: 8300000, guid: b436c51e9eae6a14281a5ddb5562d16a, type: 3}
+  - {fileID: 8300000, guid: 478a193e91bcc61479544851293f8206, type: 3}
+  - {fileID: 8300000, guid: beda634af5ddb7145adf6c6afa8a440c, type: 3}
+  - {fileID: 8300000, guid: 72bdf91b9c9709c4aaea2afb489bfa7a, type: 3}
+  - {fileID: 8300000, guid: 9f3b00aec0ea5b54aa54eb6995a535da, type: 3}
+  - {fileID: 8300000, guid: 103edfedbdfafc84ea0e8cd228850183, type: 3}
   GrabSFXList:
   - objectID: 0
     GrabSFX: {fileID: 8300000, guid: 649966eba4167f4b2b1f5540393ce950, type: 3}
@@ -99,6 +132,16 @@ MonoBehaviour:
   - objectID: 15
     GrabSFX: {fileID: 8300000, guid: 0e793c2f9c4344c43bf50d3ff1ba4f0b, type: 3}
     CrashSFX: {fileID: 8300000, guid: 05c0bfcec5f15f54caadc4834b343426, type: 3}
+  - objectID: 16
+    GrabSFX: {fileID: 8300000, guid: 897c2bac6d84aa647851572b73bb038a, type: 3}
+    CrashSFX: {fileID: 8300000, guid: 3e27bef77b191914b8240031acf276f0, type: 3}
+  - objectID: 17
+    GrabSFX: {fileID: 8300000, guid: 27a5ac0f8ff6d5a48a718a1c58faa42c, type: 3}
+    CrashSFX: {fileID: 8300000, guid: fbed3785ac291d547bdcab9c75dce5fb, type: 3}
+  stepDelay: 0
+  delaybetweenstepsmultiplier: 1.5
+  MonsterStepDelay: 0
+  PlayerSFXvolMult: 0.3
 --- !u!114 &8268123039953800461
 MonoBehaviour:
   m_ObjectHideFlags: 0
