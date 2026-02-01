@@ -4,14 +4,16 @@ using System.Collections;
 
 public class UIFakeLightMove : MonoBehaviour
 {
+    [Header("References")]
     public RectTransform lightCircle;
+    public RectTransform startPoint; 
     public RectTransform stopPoint;
     public RawImage targetImage;
 
     [Header("Movement")]
     public float speed = 300f;
 
-    [Header("Image")]
+    [Header("Image Reveal")]
     public float imageFadeInDuration = 0.5f;
     public float imageFadeOutDuration = 1.2f;
 
@@ -19,7 +21,7 @@ public class UIFakeLightMove : MonoBehaviour
     public float shakeDuration = 0.3f;
     public float shakeStrength = 15f;
 
-    [Header("Light")]
+    [Header("Light Fade")]
     public float lightFadeOutDuration = 0.4f;
 
     [Header("Delays")]
@@ -35,7 +37,8 @@ public class UIFakeLightMove : MonoBehaviour
     void Awake()
     {
         lightImage = lightCircle.GetComponent<Image>();
-        lightStartPos = lightCircle.anchoredPosition;
+        lightStartPos = startPoint.anchoredPosition; 
+        lightCircle.anchoredPosition = lightStartPos;
         lightStartColor = lightImage.color;
     }
 
@@ -70,6 +73,7 @@ public class UIFakeLightMove : MonoBehaviour
             yield return FadeOutLight();
 
             yield return new WaitForSecondsRealtime(imageHoldTime);
+
             yield return FadeOutImage();
 
             yield return new WaitForSecondsRealtime(loopDelay);
@@ -100,6 +104,8 @@ public class UIFakeLightMove : MonoBehaviour
             targetImage.color = c;
             yield return null;
         }
+        c.a = 1f;
+        targetImage.color = c;
     }
 
     IEnumerator FadeOutImage()
@@ -114,6 +120,8 @@ public class UIFakeLightMove : MonoBehaviour
             targetImage.color = c;
             yield return null;
         }
+        c.a = 0f;
+        targetImage.color = c;
     }
 
     IEnumerator ShakeLight()
@@ -143,5 +151,7 @@ public class UIFakeLightMove : MonoBehaviour
             lightImage.color = c;
             yield return null;
         }
+        c.a = 0f;
+        lightImage.color = c;
     }
 }
