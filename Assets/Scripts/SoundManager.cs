@@ -48,6 +48,13 @@ public class SoundManager : MonoBehaviour
         instance = this;
     }
 
+
+    public void ChangeVolume()
+    {
+        AudioMixer.SetFloat("MusicVolume", Mathf.Log10(DataScript.instance.Options.MusicVol) * 20f);
+        AudioMixer.SetFloat("SoundVolume", Mathf.Log10(DataScript.instance.Options.SFXVol) * 20f);
+        AudioMixer.SetFloat("MasterVolume", Mathf.Log10(DataScript.instance.Options.Mastervol) * 20f);
+    }
     private void Update()
     {
         if (MovementController.instance != null)
